@@ -8,6 +8,7 @@ import DemoTradingAcctPage from "./DemoTradingAcctPage";
 import SocialTradingAcctPage from "./SocialTradingAcctPage";
 import DepositsPage from "./DepositsPage";
 import CryptoPage from "./CryptoPage";
+import StocksPage from "./StocksPage";
 export {
   Home,
   LoginPage,
@@ -19,4 +20,5 @@ export {
   SocialTradingAcctPage,
   DepositsPage,
   CryptoPage,
+  StocksPage,
 };

@@ -21,6 +21,7 @@ import DepositsPage from "../pages/DepositsPage";
 import DepositsSecondSection from "./DepositsSecondSection";
 import CryptoPage from "../pages/CryptoPage";
 import CryptoPageTable from "./crypto_page-components/CryptoPageTable";
+import StocksPage from "../pages/StocksPage";
 import TradingHeroSection from "./TradingHeroSection";
 import TradingAcctsCardsSection from "./TradingAcctsCardsSection";
 import TradingTableSection from "./TradingTableSection";
@@ -30,6 +31,7 @@ import AccountTypeDropdown from "../components/crypto_page-components/AccountTyp
 import TableComponent from "../components/crypto_page-components/TableComponent";
 import TradingDropdown from "./mobile/TradingDropdown";
 import MarketsDropdown from "./mobile/MarketsDropdown";
+import MarketsInfoSection from "./MarketsInfoSection";
 export {
   About,
   Articles,
@@ -63,4 +65,6 @@ export {
   TableComponent,
   TradingDropdown,
   MarketsDropdown,
+  StocksPage,
+  MarketsInfoSection,
 };

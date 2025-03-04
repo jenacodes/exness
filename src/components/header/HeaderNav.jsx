@@ -141,12 +141,12 @@ const HeaderNav = () => {
                 >
                   Commodities CFD
                 </a>
-                <a
-                  href=""
+                <Link
+                  to="/stocks-cfd"
                   className="text-xl leading-7 font-bold font-poppins hover:text-gray-500 transition-all"
                 >
-                  Stocks CFD
-                </a>
+                  Stocks Cfd
+                </Link>
                 <a
                   href=""
                   className="text-xl leading-7 font-bold font-poppins hover:text-gray-500 transition-all"

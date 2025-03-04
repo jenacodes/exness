@@ -11,11 +11,14 @@ import {
   FaqSection,
   Footer,
   Header,
+  MarketsInfoSection,
 } from "../components";
+
 import {
   CrptoPageDetails,
   Crypto_Page_Faqs,
   CryptoArticlesData,
+  cryptoInfoSectionData,
   deposit_faq_texts,
 } from "../utils/constants";
 
@@ -54,109 +57,11 @@ const CryptoPage = () => {
 
       <CryptoPageTable />
 
-      <section className="mx-6 my-16 md:mx-12 lg:mx-[84px]">
-        <div className="xl:max-w-[1280px]">
-          <div className="grid lg:grid-cols-6 lg:gap-12">
-            <div className=" md:col-span-2">
-              <h2 className="text-4xl leading-12 font-semibold tracking-wider mb-2">
-                Crypto market conditions
-              </h2>
-            </div>
-            <div className="md:col-span-4">
-              <div className="flex flex-col ">
-                <div>
-                  <p className="text-lg leading-6 text-gray-500">
-                    The crypto market is a digital currency market that uses
-                    blockchain technology to create new coins and provide users
-                    with secure transactions. Trading crypto derivatives allows
-                    you to diversify your online portfolio and capitalize on the
-                    movements of cryptocurrency prices, whether they’re rising
-                    or falling.
-                  </p>
-                </div>
-                <div className="my-6 py-6 md:mt-8 md:mb-0 border-t border-t-gray-300 lg:mt-12">
-                  <div className="grid gap-2">
-                    <h4 className="text-base md:text-2xl leading-6 font-semibold tracking-wider">
-                      Crypto trading hours
-                    </h4>
-                    <p className="text-sm md:text-lg leading-5 mb-3 ">
-                      You can trade cryptocurrencies 24/7 except during server
-                      maintenance. We will inform you via email when this takes
-                      place.
-                    </p>
-                    <p className="text-sm md:text-lg leading-5 ">
-                      The below cryptocurrency pairs have close only mode:
-                    </p>
-                    <ul className="my-4 pl-10">
-                      <li className="list-disc">
-                        BTCAUD, BTCJPY, BTCCNH, BTCTHB, BTCZAR: on Sunday from
-                        21:35 to 22:05
-                      </li>
-                      <li className="list-disc">
-                        BTCXAU, BTCXAG: Monday - Thursday from 21:58 to 23:01
-                      </li>
-                    </ul>
-                    <p className="text-sm md:text-lg leading-5">
-                      All timings are in server time (GMT+0).
-                    </p>
-                    <p className="text-base md:text-lg leading-5 md:mt-6 mt-4">
-                      Learn more about trading hours in our
-                      <a href="" className="text-blue-500 hover:underline">
-                        Help Center
-                      </a>
-                    </p>
-                  </div>
-                  <hr className="border border-gray-100 my-6 " />
-                  <div className="grid gap-2">
-                    <h4 className="text-sm md:text-lg leading-6 font-semibold tracking-wider">
-                      Spreads¹
-                    </h4>
-                    <p className="text-sm md:text-lg leading-5 mb-4 md:mb-6 ">
-                      Spreads are always floating, so the spreads in the table
-                      above are yesterday’s averages. For live spreads, please
-                      refer to the trading platform.
-                    </p>
-                  </div>
-                  <hr className="border border-gray-100 my-6 " />
-                  <div className="grid gap-2">
-                    <h4 className="text-sm md:text-lg leading-6 font-semibold tracking-wider">
-                      Swap
-                    </h4>
-                    <p className="text-sm md:text-lg leading-5 ">
-                      No swap is charged on cryptocurrency positions.
-                    </p>
-                  </div>
-                  <hr className="border border-gray-100 my-6 " />
-                  <div className="grid gap-2">
-                    <h4 className="text-sm md:text-lg leading-6 font-semibold tracking-wider">
-                      Fixed margin requirements
-                    </h4>
-                    <p className="text-sm md:text-lg leading-5 ">
-                      Margin requirements for all cryptocurrency pairs are
-                      fixed, regardless of the leverage you use.
-                    </p>
-                  </div>
-
-                  <hr className="border border-gray-100 my-6 " />
-
-                  <div className="grid gap-2">
-                    <h4 className="text-sm md:text-lg leading-6 font-semibold tracking-wider">
-                      Stop level
-                    </h4>
-                    <p className="text-sm md:text-lg leading-6 mb-4 ">
-                      Please note that the stop level values in the table above
-                      are subject to change and may not be available for traders
-                      using certain high-frequency trading strategies or Expert
-                      Advisors.
-                    </p>
-                  </div>
-                  <hr className="border border-gray-100 my-4 md:my-6 " />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MarketsInfoSection
+        header={cryptoInfoSectionData.header}
+        description={cryptoInfoSectionData.description}
+        subsections={cryptoInfoSectionData.subsections}
+      />
 
       <section className="mx-6 my-16 md:mx-12 md:mb-20 md:mt-0 lg:mx-[84px]">
         <div>

@@ -7,12 +7,12 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
   const { pathname } = useLocation();
   const isDepositPage = pathname === "/deposits-and-withdrawals";
   const isCryptoPage = pathname === "/crypto-cfd";
+  const isStocksPage = pathname === "/stocks-cfd";
 
-  const h2Class = isCryptoPage
-    ? "text-3xl text-center md:text-6xl  md:text-left font-bold mb-4 text-white tracking-wider whitespace-pre-line"
-    : isDepositPage
-    ? "text-3xl text-center md:text-6xl md:text-left font-bold mb-4 text-white tracking-wider"
-    : "text-2xl md:text-5xl font-bold mb-4 text-white tracking-wider";
+  const h2Class =
+    isCryptoPage || isStocksPage || isDepositPage
+      ? "text-3xl text-center md:text-6xl  md:text-left font-bold mb-4 text-white tracking-wider whitespace-pre-line"
+      : "text-2xl md:text-5xl font-bold mb-4 text-white tracking-wider";
 
   return (
     <section
@@ -39,7 +39,14 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
             <SignInButton text={"Try Free Demo"} />
           </div>
         )}
-        {!isDepositPage && !isCryptoPage && (
+        {isStocksPage && (
+          <div className="flex flex-col md:flex-row gap-2.5">
+            <RegisterButton text={"Register"} />
+            <SignInButton text={"Try Free Demo"} />
+          </div>
+        )}
+
+        {!isDepositPage && !isCryptoPage && !isStocksPage && (
           <div>
             <RegisterButton text={"Meet the team"} />
           </div>
