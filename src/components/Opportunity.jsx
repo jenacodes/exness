@@ -26,24 +26,30 @@ const Opportunity = () => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <a
-              href=""
-              className="text-gray-500 hover:underline hover:text-black "
-            >
-              Meta Trader 5 {">"}
-            </a>
-            <a
-              href=""
-              className="text-gray-500 hover:underline hover:text-black "
-            >
-              Exness Terminal {">"}
-            </a>
-            <a
-              href=""
-              className="text-gray-500 hover:underline hover:text-black "
-            >
-              Exness Trade App {">"}
-            </a>
+            <div>
+              <a
+                href=""
+                className="text-gray-500 hover:underline hover:text-black "
+              >
+                Meta Trader 5 {">"}
+              </a>
+            </div>
+            <div>
+              <a
+                href=""
+                className="text-gray-500 hover:underline hover:text-black "
+              >
+                Exness Terminal {">"}
+              </a>
+            </div>
+            <div>
+              <a
+                href=""
+                className="text-gray-500 hover:underline hover:text-black "
+              >
+                Exness Trade App {">"}
+              </a>
+            </div>
           </div>
         </div>
       </div>

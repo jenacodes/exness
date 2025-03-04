@@ -10,10 +10,10 @@ const DepositsSecondSection = ({
   details = frictionlessExperienceDetails,
 }) => {
   return (
-    <section className="my-16 mx-6 md:mx-[84px] md:my-32">
+    <section className="my-16 mx-6 md:mx-12 md:my-20 lg:mx-[84px] lg:my-32">
       {/* Main Heading & Description */}
       <div className="text-center mb-6 md:mb-12">
-        <div className="max-w-[312px] lg:max-w-[656px] ml-auto mr-auto">
+        <div className="max-w-[312px] md:max-w-[640px] lg:max-w-[656px] ml-auto mr-auto">
           <h2 className="text-3xl leading-9 font-semibold tracking-wider md:tracking-widest md:font-semibold font-poppins mb-2">
             {mainHeading}
           </h2>

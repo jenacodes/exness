@@ -20,12 +20,12 @@ const CryptoPageTable = () => {
   const desktopOptions = ["Standard", "Pro", "Zero", "Spread"];
 
   return (
-    <section className="my-16 mx-6 lg:mx-[84px] lg:my-32">
+    <section className="my-16 mx-6 md:mx-12 lg:mx-[84px] lg:my-32">
       <div>
         {/* Section Heading */}
         <div className="text-center mb-6">
-          <div className="max-w-[312px] lg:max-w-[656px] mx-auto md:mb-5">
-            <h2 className="text-2xl md:text-4xl font-semibold tracking-wider md:tracking-widest leading-9 mb-2 ">
+          <div className="max-w-[312px] md:max-w-[640px] lg:max-w-[656px] mx-auto md:mb-5">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wider md:tracking-wider lg:tracking-widest leading-9 mb-2 ">
               Crypto market spreads and margin
             </h2>
           </div>
@@ -36,7 +36,7 @@ const CryptoPageTable = () => {
           <AccountTypeDropdown onSelect={handleSelect} />
           {/* Desktop buttons */}
           <div className="min-h-12">
-            <div className="hidden md:block ">
+            <div className="hidden md:hidden lg:block ">
               <div className="flex border-b border-b-gray-200">
                 {desktopOptions.map((option) => (
                   <button

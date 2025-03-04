@@ -29,7 +29,7 @@ const AccountTypeDropdown = ({ onSelect }) => {
   };
 
   return (
-    <div className="md:hidden relative" ref={dropdownRef}>
+    <div className=" lg:hidden relative" ref={dropdownRef}>
       <button
         type="button"
         className="w-full px-4 py-2.5 text-left bg-white border border-gray-300 rounded-md 

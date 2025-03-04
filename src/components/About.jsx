@@ -7,8 +7,8 @@ const About = () => {
     <section className="px-6 pt-16 md:section">
       <div className="relative overflow-hidden h-[500px] flex flex-col items-center justify-center py-12 md:py-24">
         <div className="font-poppins relative flex flex-col max-w-[658px] w-full text-center px-4 md:px-20">
-          <h1 className="text-3xl sm:text-4xl md:text-[56px] leading-tight md:leading-[72px] font-bold text-black">
-            Upgrade the way&nbsp;you trade
+          <h1 className="text-3xl sm:text-4xl md:text-6xl leading-tight md:leading-[72px] font-bold text-black tracking-widest text-center whitespace-pre-line">
+            Upgrade the way you trade
           </h1>
 
           <p className="text-base sm:text-lg mt-2.5 mb-12">

@@ -123,12 +123,6 @@ It's also very important to keep up with crypto market news when trying to ident
   {
     id: 3,
     question: "Is Bitcoin a good cryptocurrency to trade?",
-    answer:
-      "No. Demo accounts are virtual trading accounts that mimic real trading conditions, allowing traders to practice without using real funds. When you register an Exness account, you get an MT5-based demo account with $10,000 in virtual funds by default.",
-  },
-  {
-    id: 4,
-    question: "Is Bitcoin a good cryptocurrency to trade?",
     answer: `Bitcoin is the most well-known and widely-used cryptocurrency. Its market capitalization is larger than all other crypto market caps combined.
 
 It also has the highest level of liquidity, in addition to a robust infrastructure. This makes it the most popular cryptocurrency among traders and investors alike.
@@ -140,12 +134,12 @@ Ultimately, only you can determine whether or not Bitcoin is a good addition to 
 As always, we recommend doing your own research and staying up to date with the latest crypto news before trading the crypto market.`,
   },
   {
-    id: 5,
+    id: 4,
     question: "Can I trade during the weekend?",
     answer: `We offer 24/7 trading on all cryptocurrencies, except a few cryptocurrency pairs (see above). In case of any server maintenance, we will keep you informed.`,
   },
   {
-    id: 6,
+    id: 5,
     question: "How do you deal with price gaps?",
     answer: `At Exness, we know how it feels when your pending order falls in a price gap, so it’s only fair that we guarantee no slippage for virtually all pending orders that are executed at least 3 hours after trading opens for an instrument. However, if your order meets any of the following criteria, it will be executed at the first market quote that follows the gap:
 
@@ -180,6 +174,7 @@ export const Demo_Trading_faqs = [
   },
 ];
 
+//Home Broker texts
 export const Home_Broker_texts = [
   "At Exness, 95% of withdrawals are processed instantly (under 1 minute). Once your funds leave our custody, it's up to your chosen payment provider to process the funds and credit your account.",
   "Best spreads refers to average or max spreads offered by Exness, excluding agents’ commission for XAUUSD for the first two seconds after high-impact news, from January to May 2024, compared with five other large brokers.",

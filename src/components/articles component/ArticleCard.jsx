@@ -7,7 +7,7 @@ const ArticleCard = ({ id, imageSrc, altText, category, title, link }) => {
   return (
     <div
       key={id}
-      className="border border-black rounded-b-xl hover:shadow-lg transition-shadow"
+      className="border border-gray-300 rounded-b-xl hover:shadow-lg transition-shadow"
     >
       <a href={link} className="cursor-pointer">
         <figure className="overflow-hidden">

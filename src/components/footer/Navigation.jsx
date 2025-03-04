@@ -7,7 +7,7 @@ const Navigation = () => {
     <>
       {/* Navigation */}
       {!isLoginPage && (
-        <nav className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-6">
+        <nav className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6">
           {[...Array(6)].map((_, i) => (
             <div key={i} className="break-inside-avoid">
               <ul className="space-y-3">

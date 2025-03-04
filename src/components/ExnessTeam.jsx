@@ -17,7 +17,7 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
   return (
     <section
       style={{ backgroundImage: `url(${image})` }}
-      className="relative w-full flex min-h-auto bg-cover bg-center px-6 py-8 md:px-[84px]"
+      className="relative w-full flex min-h-auto bg-cover bg-center px-6 py-8 md:px-12 lg:px-[84px]"
     >
       <div className="relative flex flex-col justify-between items-center min-h-[calc(141.176vw)] md:min-h-[500px] md:items-start sm:h-full md:justify-center w-full">
         <div className="w-full lg:w-[656px]">

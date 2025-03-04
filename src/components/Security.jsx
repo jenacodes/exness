@@ -20,18 +20,22 @@ const Security = () => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <a
-              href=""
-              className="text-gray-500 hover:underline hover:text-black "
-            >
-              Client Protection {">"}
-            </a>
-            <a
-              href=""
-              className="text-gray-500 hover:underline hover:text-black "
-            >
-              Why Exness {">"}
-            </a>
+            <div>
+              <a
+                href=""
+                className="text-gray-500 hover:underline hover:text-black "
+              >
+                Client Protection {">"}
+              </a>
+            </div>
+            <div>
+              <a
+                href=""
+                className="text-gray-500 hover:underline hover:text-black "
+              >
+                Why Exness {">"}
+              </a>
+            </div>
           </div>
         </div>
         <div className="">

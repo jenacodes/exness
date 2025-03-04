@@ -20,7 +20,7 @@ const FaqSection = ({ faqs = [] }) => {
   };
 
   return (
-    <section className="my-16 mx-6 md:mx-[84px] md:my-32">
+    <section className="my-16 mx-6 md:mx-12 md:my-20 lg:mx-[84px] lg:my-32">
       <div className="md:grid grid-cols-12">
         <div className="leading-[18px] whitespace-pre-line font-medium col-span-4">
           <h2 className="text-3xl md:text-4xl font-semibold md:tracking-wider leading-9 tracking-wide">

@@ -54,9 +54,9 @@ const CryptoPage = () => {
 
       <CryptoPageTable />
 
-      <section className="mx-6 my-16 md:mx-[84px]">
+      <section className="mx-6 my-16 md:mx-12 lg:mx-[84px]">
         <div className="xl:max-w-[1280px]">
-          <div className="grid md:grid-cols-6 md:gap-12">
+          <div className="grid lg:grid-cols-6 lg:gap-12">
             <div className=" md:col-span-2">
               <h2 className="text-4xl leading-12 font-semibold tracking-wider mb-2">
                 Crypto market conditions
@@ -74,7 +74,7 @@ const CryptoPage = () => {
                     or falling.
                   </p>
                 </div>
-                <div className="my-6 py-6 border-t border-t-gray-300 lg:mt-12">
+                <div className="my-6 py-6 md:mt-8 md:mb-0 border-t border-t-gray-300 lg:mt-12">
                   <div className="grid gap-2">
                     <h4 className="text-base md:text-2xl leading-6 font-semibold tracking-wider">
                       Crypto trading hours
@@ -158,9 +158,9 @@ const CryptoPage = () => {
         </div>
       </section>
 
-      <section className="mx-6 my-16 md:mx-12 lg:mx-[84px]">
+      <section className="mx-6 my-16 md:mx-12 md:mb-20 md:mt-0 lg:mx-[84px]">
         <div>
-          <div className="text-center mb-6 max-w-[312px] lg:max-w-[656px] mx-auto">
+          <div className="text-center mb-6 max-w-[312px] md:max-w-[640px] lg:max-w-[656px] mx-auto">
             <h2 className="text-3xl md:text-4xl leading-9 font-semibold tracking-wider lg:mb-4">
               Why trade crypto with Exness
             </h2>
@@ -170,7 +170,7 @@ const CryptoPage = () => {
               better-than-market conditions.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex flex-col rounded-lg p-6 bg-white border border-gray-300">
               <div className="flex justify-end pb-6">
                 <div>

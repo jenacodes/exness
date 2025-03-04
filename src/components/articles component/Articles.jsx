@@ -49,7 +49,7 @@ const Articles = ({ articlesData, headerDetails }) => {
   const articles = articlesData || defaultData;
 
   return (
-    <section className="px-6 my-16 md:mx-[84px] md:my-32 md:px-0">
+    <section className="px-6 my-16 md:mx-12 md:my-20 lg:mx-[84px] lg:my-32 md:px-0">
       <ArticlesHeader
         title={header.title}
         subtitle={header.subtitle}
@@ -57,8 +57,8 @@ const Articles = ({ articlesData, headerDetails }) => {
         linkHref={header.linkHref}
       />
       <div
-        className={`grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-3.5 ${
-          isCryptoArticles && "md:grid-cols-4"
+        className={`grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-3.5 ${
+          isCryptoArticles && "lg:grid-cols-4 md:grid-cols-2"
         }`}
       >
         {articles.map((article) => (
