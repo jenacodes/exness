@@ -9,6 +9,7 @@ import {
   DepositsPage,
   CryptoPage,
   StocksPage,
+  ForexPage,
 } from "./pages";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/deposits-and-withdrawals" element={<DepositsPage />} />
         <Route path="/crypto-cfd" element={<CryptoPage />} />
         <Route path="/stocks-cfd" element={<StocksPage />} />
+        <Route path="/forex-cfd" element={<ForexPage />} />
       </Routes>
     </>
   );

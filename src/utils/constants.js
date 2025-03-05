@@ -551,7 +551,7 @@ export const tradingDropdownSections = [
 export const marketsDropdownSections = [
   {
     links: [
-      { to: "/crypto-cfd", label: "Forex Cfd" },
+      { to: "/forex-cfd", label: "Forex Cfd" },
       { to: "/crypto-cfd", label: "Commodities Cfd" },
       { to: "/stocks-cfd", label: "Stocks Cfd" },
       { to: "/crypto-cfd", label: "Indices Cfd" },

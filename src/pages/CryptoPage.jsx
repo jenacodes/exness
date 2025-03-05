@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
 import mobile from "../assets/crypto-page-imgs/_exness_cryptocurrencies_header_mobile_.jpg";
 import desktop from "../assets/crypto-page-imgs/_exness_cryptocurrencies_header_desktop_.jpg";
+import useWindowWidth from "../components/UseWindowWidth";
 import {
   Articles,
   BrokerSection,
@@ -30,17 +30,7 @@ const CryptoPage = () => {
     subtitle: `Explore crypto trading strategies, analysis and techniques to gain an advantage and stay ahead of the curve with our detailed trading guides.`,
   };
 
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const width = useWindowWidth();
   return (
     <div>
       <Header />

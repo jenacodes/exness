@@ -54,7 +54,7 @@ export const stocksInfoSectionData = {
         "Please note that the stop level values in the table above are subject to change and may not be available for traders using certain high-frequency trading strategies or Expert Advisors.",
     },
   ],
-}; // stocks page
+};
 
 export const stocksCards = [
   {

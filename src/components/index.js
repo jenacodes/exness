@@ -5,6 +5,7 @@ import ArticleCard from "./articles component/ArticleCard";
 import BrokerSection from "./BrokerSection";
 import BrokerSectionTexts from "./BrokerSectionTexts";
 import Button from "./buttons/Button";
+import TransparentButton from "./buttons/TransparentButton";
 import ExnessTeam from "./ExnessTeam";
 import Footer from "./Footer";
 import Header from "./header/Header";
@@ -20,6 +21,7 @@ import SocialTradingAcctPage from "../pages/SocialTradingAcctPage";
 import DepositsPage from "../pages/DepositsPage";
 import DepositsSecondSection from "./DepositsSecondSection";
 import CryptoPage from "../pages/CryptoPage";
+import ForexPage from "../pages/ForexPage";
 import CryptoPageTable from "./crypto_page-components/CryptoPageTable";
 import StocksPage from "../pages/StocksPage";
 import TradingHeroSection from "./TradingHeroSection";
@@ -33,6 +35,7 @@ import TradingDropdown from "./mobile/TradingDropdown";
 import MarketsDropdown from "./mobile/MarketsDropdown";
 import MarketsInfoSection from "./MarketsInfoSection";
 import MarketsInfoCardsSection from "./MarketsInfoCardsSection";
+import useWindowWidth from "./UseWindowWidth";
 export {
   About,
   Articles,
@@ -45,6 +48,7 @@ export {
   Header,
   Opportunity,
   Button,
+  TransparentButton,
   Security,
   SignInButton,
   Thrive,
@@ -67,6 +71,8 @@ export {
   TradingDropdown,
   MarketsDropdown,
   StocksPage,
+  ForexPage,
   MarketsInfoSection,
   MarketsInfoCardsSection,
+  useWindowWidth,
 };

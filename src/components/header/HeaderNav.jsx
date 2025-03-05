@@ -129,12 +129,12 @@ const HeaderNav = () => {
           >
             <div className="flex gap-[72px] py-[84px] -z-20">
               <div className="flex flex-col gap-3">
-                <a
-                  href=""
+                <Link
+                  to="/forex-cfd"
                   className="text-xl leading-7 font-bold font-poppins hover:text-gray-500 transition-all"
                 >
-                  Forex CFD
-                </a>
+                  Forex Cfd
+                </Link>
                 <a
                   href=""
                   className="text-xl leading-7 font-bold font-poppins hover:text-gray-500 transition-all"

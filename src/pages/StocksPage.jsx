@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   Articles,
   BrokerSection,
@@ -12,12 +11,14 @@ import {
   MarketsInfoSection,
 } from "../components";
 import mobile from "../assets/stocks-page-imgs/stocks-hero-mobile.jpg";
+import useWindowWidth from "../components/UseWindowWidth";
 import desktop from "../assets/stocks-page-imgs/stocks-hero-desktop.jpg";
 import {
   stocksCards,
   stocksInfoSectionData,
   StocksPageDetails,
 } from "../constants/Markets-section-details/stocks-page";
+
 import { stocksArticlesData } from "../constants/articles/stocks-articles";
 import { stocks_Page_Faqs } from "../constants/faqs/stocks-faqs";
 import { deposit_faq_texts } from "../utils/constants";
@@ -27,17 +28,7 @@ const StocksPage = () => {
     title: `Gain new perspectives on trading stocks`,
     subtitle: `Arm yourself with cutting-edge knowledge, revolutionize your trading strategies and navigate the stock market with prowess.`,
   };
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const width = useWindowWidth();
   return (
     <div>
       <Header />
@@ -68,7 +59,7 @@ const StocksPage = () => {
       <Articles
         headerDetails={stocksArticlesheaderDetails}
         articlesData={stocksArticlesData}
-        key={stocksCards}
+        key={stocksArticlesData.id}
       />
 
       <BrokerSection

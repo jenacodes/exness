@@ -10,6 +10,7 @@
   --color-light-gray: #eeefef;
   --color-dark-blue: #070e20;
   --color-demo-card-gray: #f8f9f9;
+  --color-transparent-btn: #6c859529;
 }
 
 @font-face {
@@ -30,6 +31,9 @@
 
   .sign-in-btn {
     @apply bg-gray-300 font-bold py-3  px-5 text-black rounded-xs relative hover:cursor-pointer;
+  }
+  .transparent-btn {
+    @apply bg-transparent-btn font-bold py-3  px-5 text-white rounded-xs relative hover:cursor-pointer;
   }
 }
 

@@ -55,6 +55,9 @@ const FaqSection = ({ faqs = [] }) => {
                 }`}
               >
                 <p className="text-sm my-2.5">{faq.answer}</p>
+                <p className="text-sm my-2.5">{faq.firstanswer}</p>
+                <p className="text-sm my-2.5">{faq.secondanswer}</p>
+                <p className="text-sm my-2.5">{faq.thirdanswer}</p>
               </div>
               <hr className="border-gray-300" />
             </div>

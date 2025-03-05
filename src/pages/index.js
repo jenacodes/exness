@@ -9,6 +9,7 @@ import SocialTradingAcctPage from "./SocialTradingAcctPage";
 import DepositsPage from "./DepositsPage";
 import CryptoPage from "./CryptoPage";
 import StocksPage from "./StocksPage";
+import ForexPage from "./ForexPage";
 export {
   Home,
   LoginPage,
@@ -21,4 +22,5 @@ export {
   DepositsPage,
   CryptoPage,
   StocksPage,
+  ForexPage,
 };

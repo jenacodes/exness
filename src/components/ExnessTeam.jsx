@@ -2,15 +2,17 @@
 import RegisterButton from "./buttons/Button";
 import { useLocation } from "react-router-dom";
 import SignInButton from "./buttons/SignInButton";
+import TransparentButton from "./buttons/TransparentButton";
 
 const ExnessTeam = ({ headerText, paragraph, image }) => {
   const { pathname } = useLocation();
   const isDepositPage = pathname === "/deposits-and-withdrawals";
   const isCryptoPage = pathname === "/crypto-cfd";
   const isStocksPage = pathname === "/stocks-cfd";
+  const isForexPage = pathname === "/forex-cfd";
 
   const h2Class =
-    isCryptoPage || isStocksPage || isDepositPage
+    isCryptoPage || isStocksPage || isDepositPage || isForexPage
       ? "text-3xl text-center md:text-6xl  md:text-left font-bold mb-4 text-white tracking-wider whitespace-pre-line"
       : "text-2xl md:text-5xl font-bold mb-4 text-white tracking-wider";
 
@@ -42,11 +44,17 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
         {isStocksPage && (
           <div className="flex flex-col md:flex-row gap-2.5">
             <RegisterButton text={"Register"} />
-            <SignInButton text={"Try Free Demo"} />
+            <TransparentButton text={"Try Free Demo"} />
+          </div>
+        )}
+        {isForexPage && (
+          <div className="flex flex-col md:flex-row gap-2.5">
+            <RegisterButton text={"Register"} />
+            <TransparentButton text={"Try Free Demo"} />
           </div>
         )}
 
-        {!isDepositPage && !isCryptoPage && !isStocksPage && (
+        {!isDepositPage && !isCryptoPage && !isStocksPage && !isForexPage && (
           <div>
             <RegisterButton text={"Meet the team"} />
           </div>
