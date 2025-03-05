@@ -32,6 +32,7 @@ import TableComponent from "../components/crypto_page-components/TableComponent"
 import TradingDropdown from "./mobile/TradingDropdown";
 import MarketsDropdown from "./mobile/MarketsDropdown";
 import MarketsInfoSection from "./MarketsInfoSection";
+import MarketsInfoCardsSection from "./MarketsInfoCardsSection";
 export {
   About,
   Articles,
@@ -67,4 +68,5 @@ export {
   MarketsDropdown,
   StocksPage,
   MarketsInfoSection,
+  MarketsInfoCardsSection,
 };

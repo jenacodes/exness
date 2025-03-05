@@ -7,7 +7,10 @@ import {
 } from "../components";
 import mobile from "../assets/stocks-page-imgs/stocks-hero-mobile.jpg";
 import desktop from "../assets/stocks-page-imgs/stocks-hero-desktop.jpg";
-import { stocksInfoSectionData, StocksPageDetails } from "../utils/constants";
+import {
+  stocksInfoSectionData,
+  StocksPageDetails,
+} from "../constants/Markets-section-details/stocks-page";
 
 const StocksPage = () => {
   const [width, setWidth] = useState(window.innerWidth);
