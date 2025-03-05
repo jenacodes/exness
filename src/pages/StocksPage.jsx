@@ -1,18 +1,32 @@
 import { useState, useEffect } from "react";
 import {
+  Articles,
+  BrokerSection,
+  BrokerSectionTexts,
   DepositsSecondSection,
   ExnessTeam,
+  FaqSection,
+  Footer,
   Header,
+  MarketsInfoCardsSection,
   MarketsInfoSection,
 } from "../components";
 import mobile from "../assets/stocks-page-imgs/stocks-hero-mobile.jpg";
 import desktop from "../assets/stocks-page-imgs/stocks-hero-desktop.jpg";
 import {
+  stocksCards,
   stocksInfoSectionData,
   StocksPageDetails,
 } from "../constants/Markets-section-details/stocks-page";
+import { stocksArticlesData } from "../constants/articles/stocks-articles";
+import { stocks_Page_Faqs } from "../constants/faqs/stocks-faqs";
+import { deposit_faq_texts } from "../utils/constants";
 
 const StocksPage = () => {
+  const stocksArticlesheaderDetails = {
+    title: `Gain new perspectives on trading stocks`,
+    subtitle: `Arm yourself with cutting-edge knowledge, revolutionize your trading strategies and navigate the stock market with prowess.`,
+  };
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -44,6 +58,26 @@ const StocksPage = () => {
         header={stocksInfoSectionData.header}
         subsections={stocksInfoSectionData.subsections}
       />
+      <MarketsInfoCardsSection
+        title={"Why trade stocks with Exness"}
+        description={
+          "From Big Tech to Big Pharma and more, trade stocks from large-cap companies in the global stock market with conditions designed to empower your strategy."
+        }
+        cards={stocksCards}
+      />
+      <Articles
+        headerDetails={stocksArticlesheaderDetails}
+        articlesData={stocksArticlesData}
+        key={stocksCards}
+      />
+
+      <BrokerSection
+        heading="Trade 24/7 stocks"
+        paragraph="Invest in the biggest names in tech and industry."
+      />
+      <FaqSection faqs={stocks_Page_Faqs} />
+      <BrokerSectionTexts listItems={deposit_faq_texts} />
+      <Footer />
     </div>
   );
 };

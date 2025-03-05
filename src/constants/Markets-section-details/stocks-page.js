@@ -55,3 +55,30 @@ export const stocksInfoSectionData = {
     },
   ],
 }; // stocks page
+
+export const stocksCards = [
+  {
+    imgSrc:
+      "https://d33vw3iu5hs0zi.cloudfront.net/media/exness_fast_execution_57c7f263d9.svg",
+    imgAlt: "Fast Execution icon",
+    title: "Fast execution",
+    description:
+      "Never miss a pip. Get your orders executed in milliseconds on both the MT platforms and proprietary Exness Terminals.",
+  },
+  {
+    imgSrc:
+      "https://d33vw3iu5hs0zi.cloudfront.net/media/exness_stable_spreads_832d4a7b36.svg",
+    imgAlt: "Low and stable spreads icon",
+    title: "Low and stable spreads",
+    description:
+      "Trade both rising and falling stock markets with low spreads that stay stable, even during high-impact stock market news.",
+  },
+  {
+    imgSrc:
+      "https://d33vw3iu5hs0zi.cloudfront.net/media/exness_stop_out_protection_3058b9de65.svg",
+    imgAlt: "Stop Out Protection icon",
+    title: "Stop Out Protection",
+    description:
+      "Take on volatile markets with a unique protection feature that strengthens your positions and helps delay or avoid stop outs.",
+  },
+];

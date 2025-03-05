@@ -11,6 +11,7 @@ import {
   FaqSection,
   Footer,
   Header,
+  MarketsInfoCardsSection,
   MarketsInfoSection,
 } from "../components";
 
@@ -21,6 +22,7 @@ import {
   cryptoInfoSectionData,
   deposit_faq_texts,
 } from "../utils/constants";
+import { cryptoCards } from "../constants/Markets-section-details/crypto-page";
 
 const CryptoPage = () => {
   const CryptoArticlesheaderDetails = {
@@ -63,82 +65,13 @@ const CryptoPage = () => {
         subsections={cryptoInfoSectionData.subsections}
       />
 
-      <section className="mx-6 my-16 md:mx-12 md:mb-20 md:mt-0 lg:mx-[84px]">
-        <div>
-          <div className="text-center mb-6 max-w-[312px] md:max-w-[640px] lg:max-w-[656px] mx-auto">
-            <h2 className="text-3xl md:text-4xl leading-9 font-semibold tracking-wider lg:mb-4">
-              Why trade crypto with Exness
-            </h2>
-            <p className="text-sm lg:text-lg lg:leading-6 leading-5 whitespace-pre-line text-center text-gray-500">
-              From Bitcoin to Ethereum, Litecoin, and more, you can trade
-              cryptocurrency price movements against the US dollar with
-              better-than-market conditions.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="flex flex-col rounded-lg p-6 bg-white border border-gray-300">
-              <div className="flex justify-end pb-6">
-                <div>
-                  <img
-                    src="https://d33vw3iu5hs0zi.cloudfront.net/media/instant_withdrawals_96c97dca73.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg leading-6 font-semibold whitespace-pre-line">
-                  Instant withdrawals
-                </h3>
-                <p className="mt-2">
-                  Simplify withdrawals for quick access to your funds. Choose
-                  your favorite payment method, make a withdrawal request, and
-                  enjoy instant approval.²
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-lg p-6 bg-white border border-gray-300">
-              <div className="flex justify-end pb-6">
-                <div>
-                  <img
-                    src="https://d33vw3iu5hs0zi.cloudfront.net/media/exness_swap_free_5ad242f7c9.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg leading-6 font-semibold whitespace-pre-line">
-                  Mobile platforms
-                </h3>
-                <p className="mt-2">
-                  Whether you prefer the MetaTrader mobile app or Exness Trade
-                  App, your demo trading experience is streamlined and efficient
-                  with all the Exness benefits and features.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-lg p-6 bg-white border border-gray-300">
-              <div className="flex justify-end pb-6">
-                <div>
-                  <img
-                    src="https://d33vw3iu5hs0zi.cloudfront.net/media/exness_stop_out_protection_3058b9de65.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg leading-6 font-semibold whitespace-pre-line">
-                  Mobile platforms
-                </h3>
-                <p className="mt-2">
-                  Whether you prefer the MetaTrader mobile app or Exness Trade
-                  App, your demo trading experience is streamlined and efficient
-                  with all the Exness benefits and features.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MarketsInfoCardsSection
+        title={"Why trade crypto with Exness"}
+        description={
+          "From Bitcoin to Ethereum, Litecoin, and more, you can trade cryptocurrency price movements against the US dollar with better-than-market conditions."
+        }
+        cards={cryptoCards}
+      />
 
       <Articles
         articlesData={CryptoArticlesData}

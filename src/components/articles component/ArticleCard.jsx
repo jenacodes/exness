@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 const ArticleCard = ({ id, imageSrc, altText, category, title, link }) => {
   const { pathname } = useLocation();
   const isCryptoPage = pathname === "/crypto-cfd";
+  const isStocksPage = pathname === "/stocks-cfd";
   return (
     <div
       key={id}
@@ -18,7 +19,7 @@ const ArticleCard = ({ id, imageSrc, altText, category, title, link }) => {
           />
         </figure>
         <div className="p-4 flex flex-col gap-4 lg:p-6 lg:gap-6">
-          {isCryptoPage ? null : (
+          {isCryptoPage || isStocksPage ? null : (
             <div>
               <span className="px-2 py-1 text-sm bg-gray-200 rounded-xl md:text-sm inline-block">
                 {category}
