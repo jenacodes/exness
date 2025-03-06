@@ -15,7 +15,7 @@ const Header = () => {
     <>
       {/* Main Header */}
       <header className="sticky top-0 left-0 w-full z-50 bg-white">
-        <div className="flex items-center justify-between px-7">
+        <div className="flex items-center justify-between px-7 lg:py-2.5">
           {/* Logo & Desktop Navigation */}
           <div className="flex items-center gap-6 h-16">
             <Link to="/" className="shrink-0">

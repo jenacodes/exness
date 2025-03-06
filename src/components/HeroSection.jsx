@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import RegisterButton from "./buttons/Button";
 import SignInButton from "./buttons/SignInButton";
 
-const About = () => {
+const HeroSection = () => {
   return (
     <section className="px-6 pt-16 md:section">
       <div className="relative overflow-hidden h-[500px] flex flex-col items-center justify-center py-12 md:py-24">
@@ -56,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default HeroSection;

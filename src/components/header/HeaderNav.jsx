@@ -7,11 +7,13 @@ const HeaderNav = () => {
 
   const [showTradingDropDown, setShowTradingDropDown] = useState(false);
   const [showMarketsDropDown, setShowMarketsDropDown] = useState(false);
+  const [showCompanyDropdown, setShowCompanyDropDown] = useState(false);
   // const [showPlatformsDropDown, setShowPlatformsDropDown] = useState(false);
 
   const closeDown = () => {
     setShowTradingDropDown(false);
     setShowMarketsDropDown(false);
+    setShowCompanyDropDown(false);
   };
 
   return (
@@ -25,6 +27,7 @@ const HeaderNav = () => {
                 onClick={() => {
                   setShowTradingDropDown((prev) => !prev);
                   setShowMarketsDropDown(false);
+                  setShowCompanyDropDown(false);
                 }}
               >
                 Trading
@@ -36,6 +39,7 @@ const HeaderNav = () => {
                 onClick={() => {
                   setShowMarketsDropDown((prev) => !prev);
                   setShowTradingDropDown(false);
+                  setShowCompanyDropDown(false);
                 }}
               >
                 Markets
@@ -52,7 +56,14 @@ const HeaderNav = () => {
               </button>
             </li>
             <li>
-              <button className="cursor-pointer active:text-gray-500 focus:text-gray-500 hover:text-gray-500 transition-all">
+              <button
+                className="cursor-pointer active:text-gray-500 focus:text-gray-500 hover:text-gray-500 transition-all"
+                onClick={() => {
+                  setShowCompanyDropDown((prev) => !prev);
+                  setShowTradingDropDown(false);
+                  setShowMarketsDropDown(false);
+                }}
+              >
                 Company
               </button>
             </li>
@@ -164,6 +175,25 @@ const HeaderNav = () => {
           </div>
 
           {/* PlatForm Dropdown */}
+          <div
+            className={`hidden bg-white z-10000 lg:block absolute top-full lg:pl-[120px] w-full left-0 transition-max-h-[334px] duration-300 ease-in-out
+          ${
+            showCompanyDropdown
+              ? "opacity-100 max-h-[334px] visible pointer-events-auto"
+              : "opacity-0 max-h-0 pointer-events-none"
+          }`}
+          >
+            <div className="flex gap-[72px] py-[84px] -z-20">
+              <div className="flex flex-col gap-3">
+                <Link
+                  to="/about-us"
+                  className="text-xl leading-7 font-bold font-poppins hover:text-gray-500 transition-all"
+                >
+                  About Us
+                </Link>
+              </div>
+            </div>
+          </div>
         </nav>
       )}
 

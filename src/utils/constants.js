@@ -614,41 +614,13 @@ export const cryptoInfoSectionData = {
   ],
 }; // crypto page
 
-export const stocksInfoSectionData = {
-  header: "Stock market conditions",
-  description:
-    "The stock market is a global exchange for stocks and securities. Trading stocks allows you to capitalize on the share price movements of a company, whether they are rising or falling.",
-  subsections: [
-    {
-      title: "Stocks trading hours",
-      paragraph:
-        "All stocks can be traded from Monday to Friday, between the hours of 14:40 to 20:45. Pre-market trading from 11:00 to 14:40 is available for the following stocks:",
-      secondParagraph:
-        "Please note, you can only close open orders during these pre-market hours. Opening new orders during pre-market is not possible.",
-      list: [
-        "INTC, BAC, TSLA, WFC, BABA, NFLX, C, AMD, PFE, META, JNJ, PYPL, ORCL, NVDA, MSFT, AMZN,",
-        "BTCXAU, BTCXAG: Monday - Thursday from 21:58 to 23:01",
-      ],
-      link: {
-        preText: "Learn more about trading hours in our",
-        href: "#",
-        text: "Help Center",
-      },
-    },
-    {
-      title: "Spreads¹",
-      paragraph:
-        "Spreads are always floating, so the spreads in the table above are yesterday’s averages. For live spreads, please refer to the trading platform.",
-    },
-    {
-      title: "Swap",
-      paragraph:
-        "Swaps occur at 22:00 GMT+0 each day, excluding the weekend, until the position is closed. To help you estimate your swap costs, you can use our handy Exness calculator. Please bear in mind that when trading stocks, triple swaps are charged on Fridays to cover financing costs incurred over the weekend.",
-    },
-    {
-      title: "Stop level",
-      paragraph:
-        "Please note that the stop level values in the table above are subject to change and may not be available for traders using certain high-frequency trading strategies or Expert Advisors.",
-    },
+export const sectionContent = {
+  firstSectionParagraph: [
+    "We set out in 2008 to balance ethics and technology to reimagine how the ideal trading experience could be. Today, as a leader in the industry of CFD trading, servicing over 1 million active traders, we know we're on the right path.",
+    "We built our proprietary trading features so we could offer something unique, something no other broker had ever attempted. We were the first to offer traders instant withdrawals¹, stop out protection and more. Features that give traders an edge.",
+    "Trading is just one part of the picture. We believe in creating ecosystems of benefit for traders, partners, and employees to thrive within. Making what once was deemed impossible, a reality.",
   ],
-}; // stocks page
+  thirdSectionParagraph: [
+    "Exness consists of over 2,000 tech experts and forward-thinkers from around the world, working to shape a marketplace like no other. With offices across four continents, we challenge our people to think differently and ask themselves every day – how should trading look like tomorrow?",
+  ],
+};

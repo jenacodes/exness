@@ -1,4 +1,4 @@
-import About from "./About";
+import HeroSection from "./HeroSection";
 import Articles from "./articles component/Articles";
 import ArticlesHeader from "./articles component/ArticlesHeader";
 import ArticleCard from "./articles component/ArticleCard";
@@ -36,8 +36,9 @@ import MarketsDropdown from "./mobile/MarketsDropdown";
 import MarketsInfoSection from "./MarketsInfoSection";
 import MarketsInfoCardsSection from "./MarketsInfoCardsSection";
 import useWindowWidth from "./UseWindowWidth";
+import AboutUsImageTextSection from "./AboutUsImageTextSection";
 export {
-  About,
+  HeroSection,
   Articles,
   ArticleCard,
   ArticlesHeader,
@@ -75,4 +76,5 @@ export {
   MarketsInfoSection,
   MarketsInfoCardsSection,
   useWindowWidth,
+  AboutUsImageTextSection,
 };

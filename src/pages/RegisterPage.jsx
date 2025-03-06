@@ -14,7 +14,6 @@ const RegisterPage = () => {
     },
 
     //Validate Form
-
     validationSchema: Yup.object({
       name: Yup.string(),
       email: Yup.string()

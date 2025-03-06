@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import RegisterButton from "./buttons/Button";
 import { useLocation } from "react-router-dom";
-import SignInButton from "./buttons/SignInButton";
+
 import TransparentButton from "./buttons/TransparentButton";
 
 const ExnessTeam = ({ headerText, paragraph, image }) => {
@@ -10,10 +10,13 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
   const isCryptoPage = pathname === "/crypto-cfd";
   const isStocksPage = pathname === "/stocks-cfd";
   const isForexPage = pathname === "/forex-cfd";
+  const isAboutUsPage = pathname === "/about-us";
 
   const h2Class =
     isCryptoPage || isStocksPage || isDepositPage || isForexPage
       ? "text-3xl text-center md:text-6xl  md:text-left font-bold mb-4 text-white tracking-wider whitespace-pre-line"
+      : isAboutUsPage
+      ? "text-2xl md:text-6xl md:block font-bold mb-4 text-black tracking-wider whitespace-pre-line text-center lg:text-left"
       : "text-2xl md:text-5xl font-bold mb-4 text-white tracking-wider";
 
   return (
@@ -27,18 +30,26 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
             <h2 className={h2Class}>{headerText}</h2>
           </div>
 
-          <p className="text-base md:text-lg mb-4 text-white">{paragraph}</p>
+          <p
+            className={
+              isAboutUsPage
+                ? "text-base md:text-xl mb-4 text-black text-center lg:text-left"
+                : "text-base md:text-lg mb-4 text-white"
+            }
+          >
+            {paragraph}
+          </p>
         </div>
         {isDepositPage && (
           <div className="flex flex-col md:flex-row gap-2.5">
             <RegisterButton text={"Register"} />
-            <SignInButton text={"Try Free Demo"} />
+            <TransparentButton text={"Try Free Demo"} />
           </div>
         )}
         {isCryptoPage && (
           <div className="flex flex-col md:flex-row gap-2.5">
             <RegisterButton text={"Register"} />
-            <SignInButton text={"Try Free Demo"} />
+            <TransparentButton text={"Try Free Demo"} />
           </div>
         )}
         {isStocksPage && (
@@ -54,11 +65,15 @@ const ExnessTeam = ({ headerText, paragraph, image }) => {
           </div>
         )}
 
-        {!isDepositPage && !isCryptoPage && !isStocksPage && !isForexPage && (
-          <div>
-            <RegisterButton text={"Meet the team"} />
-          </div>
-        )}
+        {!isDepositPage &&
+          !isCryptoPage &&
+          !isStocksPage &&
+          !isForexPage &&
+          !isAboutUsPage && (
+            <div>
+              <RegisterButton text={"Meet the team"} />
+            </div>
+          )}
       </div>
     </section>
   );

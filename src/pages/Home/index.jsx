@@ -1,7 +1,6 @@
 import {
   Footer,
   Header,
-  About,
   Thrive,
   Opportunity,
   Security,
@@ -9,6 +8,7 @@ import {
   Articles,
   BrokerSection,
   BrokerSectionTexts,
+  HeroSection,
 } from "../../components";
 
 import desktop from "/xxl_exness_team_pro_new_header_desktop_db7b16c370.jpg";
@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <section className="home_page">
       <Header />
-      <About />
+      <HeroSection />
       <Thrive />
       <Opportunity />
       <Security />

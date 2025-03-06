@@ -14,7 +14,10 @@ const LoginPage = () => {
     <div>
       <form action="">
         <div className="mb-4">
-          <label className="block pb-2" htmlFor="email">
+          <label
+            className="block pb-2 text-gray-500 text-[12px]"
+            htmlFor="email"
+          >
             Your Email Address
           </label>
           <input
@@ -28,7 +31,10 @@ const LoginPage = () => {
           />
         </div>
         <div className="mb-4 mt-6">
-          <label className="block pb-2" htmlFor="password">
+          <label
+            className="block pb-2 text-gray-500 text-[12px]"
+            htmlFor="password"
+          >
             Password
           </label>
           <input
