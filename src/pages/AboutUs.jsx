@@ -93,39 +93,43 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="mx-6 my-16">
+      <section className="mx-6 my-16 lg:mx-[84px] lg:my-32">
         <div>
-          <div className="text-center mb-6">
-            <div className="max-w-[312px] mx-auto ">
-              <h2 className="text-[28px] tracking-wider leading-6 font-semibold mb-2">
+          <div className="text-center mb-6 lg:mb-12">
+            <div className="max-w-[312px] lg:max-w-[656px] mx-auto ">
+              <h2 className="text-[28px] lg:text-4xl tracking-wider leading-6 lg:leading-12 lg:tracking-widest font-semibold mb-2 lg:mb-4">
                 Our values guide every advancement
               </h2>
-              <p className="text-base leading-5 whitespace-pre-line text-gray-500 ">
+              <p className="text-base lg:text-lg  leading-5 lg:leading-6 whitespace-pre-line text-gray-500 ">
                 From business strategy to employee care, every step we take
                 follows
               </p>
               <span className="text-gray-500">our 4 key values</span>
             </div>
           </div>
-          <div>
-            <div className="py-6 border-t border-t-gray-300">
-              <h3 className="text-base leading-6 font-semibold">Bold</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="py-6 border-t border-t-gray-300 lg:border-r lg:border-r-gray-300 lg:p-6">
+              <h3 className="text-base lg:text-xl leading-6 font-semibold">
+                Bold
+              </h3>
               <p className="mt-6">
                 We have innovated, pushed boundaries, and challenged the status
                 quo from day one. We follow a simple idea: if it doesn’t exist,
                 we invent it. If it does exist, we improve it.
               </p>
             </div>
-            <div className="py-6 border-t border-t-gray-300">
-              <h3 className="text-base leading-6 font-semibold">Good people</h3>
+            <div className="py-6 border-t border-t-gray-300 lg:border-r lg:border-r-gray-300 lg:p-6">
+              <h3 className="text-base lg:text-xl leading-6 font-semibold">
+                Good people
+              </h3>
               <p className="mt-6">
                 We prioritize our clients, making sure all our innovations are
                 influenced by our desire to give them the best trading
                 experience possible.
               </p>
             </div>
-            <div className="py-6 border-t border-t-gray-300">
-              <h3 className="text-base leading-6 font-semibold">
+            <div className="py-6 border-t border-t-gray-300 lg:border-r lg:border-r-gray-300 lg:p-6">
+              <h3 className="text-base lg:text-xl leading-6 font-semibold">
                 Tech professionals
               </h3>
               <p className="mt-6">
@@ -134,8 +138,10 @@ const AboutUs = () => {
                 better-than-market conditions.
               </p>
             </div>
-            <div className="py-6 border-t border-t-gray-300">
-              <h3 className="text-base leading-6 font-semibold">Reliable</h3>
+            <div className="py-6 border-t border-t-gray-300 lg:border-r lg:border-r-gray-300 lg:p-6">
+              <h3 className="text-base lg:text-xl leading-6 font-semibold">
+                Reliable
+              </h3>
               <p className="mt-6">
                 We prioritize reliability in our platform, giving us a solid
                 foundation on which to innovate. Stable spreads, fast,
