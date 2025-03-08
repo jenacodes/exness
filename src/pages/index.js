@@ -11,6 +11,7 @@ import CryptoPage from "./CryptoPage";
 import StocksPage from "./StocksPage";
 import ForexPage from "./ForexPage";
 import AboutUs from "./AboutUs";
+import Dashboard from "./Dashboard";
 export {
   Home,
   LoginPage,
@@ -25,4 +26,5 @@ export {
   StocksPage,
   ForexPage,
   AboutUs,
+  Dashboard,
 };

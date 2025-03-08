@@ -11,6 +11,7 @@ import {
   StocksPage,
   ForexPage,
   AboutUs,
+  Dashboard,
 } from "./pages";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/stocks-cfd" element={<StocksPage />} />
         <Route path="/forex-cfd" element={<ForexPage />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );

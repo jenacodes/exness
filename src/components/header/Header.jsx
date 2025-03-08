@@ -31,7 +31,7 @@ const Header = () => {
 
           {/* Desktop Buttons & Mobile Menu Toggle */}
           <div className="flex items-center gap-4">
-            <div className=" lg:flex items-center gap-4">
+            <div className="lg:flex items-center gap-4">
               <a
                 href="/login"
                 className="block lg:hidden text-sm text-gray-600"

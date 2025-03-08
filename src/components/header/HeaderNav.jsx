@@ -20,7 +20,7 @@ const HeaderNav = () => {
     <>
       {!isLoginPage && (
         <nav className="max-md:hidden md:hidden lg:block z-1">
-          <ul className={"flex flex-wrap gap-3"}>
+          <ul className={"flex flex-wrap gap-6"}>
             <li>
               <button
                 className="cursor-pointer  focus:text-gray-500 hover:text-gray-500 transition-all active:text-gray-500"
@@ -45,11 +45,7 @@ const HeaderNav = () => {
                 Markets
               </button>
             </li>
-            <li>
-              <button className="cursor-pointer active:text-gray-500 focus:text-gray-500 hover:text-gray-500 transition-all">
-                PlatForms
-              </button>
-            </li>
+
             <li>
               <button className="cursor-pointer active:text-gray-500 focus:text-gray-500 hover:text-gray-500 transition-all">
                 Tools

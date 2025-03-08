@@ -37,6 +37,9 @@ import MarketsInfoSection from "./MarketsInfoSection";
 import MarketsInfoCardsSection from "./MarketsInfoCardsSection";
 import useWindowWidth from "./UseWindowWidth";
 import AboutUsImageTextSection from "./AboutUsImageTextSection";
+import Dashboard from "../pages/Dashboard";
+import DashboardHeader from "../dashboard/DashboardHeader";
+import DashboardSidebar from "../dashboard/DashboardSidebar";
 export {
   HeroSection,
   Articles,
@@ -77,4 +80,7 @@ export {
   MarketsInfoCardsSection,
   useWindowWidth,
   AboutUsImageTextSection,
+  Dashboard,
+  DashboardHeader,
+  DashboardSidebar,
 };
