@@ -59,6 +59,7 @@ const RegisterPage = () => {
 
   // Password criteria as an array for easy mapping
   const password = values.password;
+
   const criteria = [
     {
       label: "Between 8-15 characters",

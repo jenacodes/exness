@@ -1,8 +1,8 @@
 const DashboardHeader = () => {
   return (
     <>
-      <header className="sticky top-0 left-0 w-full z-50 bg-white">
-        <div className="flex items-center justify-between px-2 py-5 lg:hidden">
+      <header className="sticky top-0 left-0 w-full z-50 bg-white border-b border-b-gray-300">
+        <div className="flex items-center justify-between px-2 py-5 lg:hidden lg:px-4 lg:py-2">
           <button className="text-4xl">
             <i className="ri-menu-line"></i>
           </button>
@@ -22,7 +22,7 @@ const DashboardHeader = () => {
             <img
               src="\exness.svg"
               alt="Exness logo"
-              className="inline-block h-6"
+              className="inline-block h-5"
             />
           </a>
           <div>
