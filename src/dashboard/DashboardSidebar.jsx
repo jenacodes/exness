@@ -2,39 +2,54 @@ import { useState } from "react";
 // import logo from "../logo.png";
 
 // icons
-import { MdMenuOpen } from "react-icons/md";
-import { IoHomeOutline } from "react-icons/io5";
-import { FaProductHunt, FaUserFriends } from "react-icons/fa";
-// import { FaUserCircle } from "react-icons/fa";
-import { TbReportSearch } from "react-icons/tb";
-import { IoLogoBuffer } from "react-icons/io";
-import { CiSettings } from "react-icons/ci";
-import { MdOutlineDashboard } from "react-icons/md";
+
+import { FaUserFriends } from "react-icons/fa";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { IoArrowDownCircleOutline } from "react-icons/io5";
+import { CgArrowTopRightO } from "react-icons/cg";
+import { RxCountdownTimer } from "react-icons/rx";
+import { HiOutlineNewspaper } from "react-icons/hi2";
+import { BiSolidUserAccount } from "react-icons/bi";
+import { HiOutlineChartBar } from "react-icons/hi";
+import { FaRegHeart } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const menuItems = [
   {
-    icons: <IoHomeOutline size={15} />,
-    label: "Home",
+    icons: <LuLayoutDashboard size={20} />,
+    label: "My account",
   },
   {
-    icons: <FaProductHunt size={15} />,
+    icons: <IoArrowDownCircleOutline size={20} />,
     label: "Products",
   },
   {
-    icons: <MdOutlineDashboard size={15} />,
+    icons: <CgArrowTopRightO size={20} />,
     label: "Dashboard",
   },
   {
-    icons: <CiSettings size={15} />,
+    icons: <RxCountdownTimer size={20} />,
     label: "Setting",
   },
   {
-    icons: <IoLogoBuffer size={15} />,
+    icons: <HiOutlineNewspaper size={20} />,
     label: "Log",
   },
   {
-    icons: <TbReportSearch size={15} />,
+    icons: <BiSolidUserAccount size={20} />,
     label: "Report",
+  },
+  {
+    icons: <HiOutlineChartBar size={20} />,
+    label: "Performance",
+  },
+  {
+    icons: <FaRegHeart size={20} />,
+    label: "Support hub",
+  },
+  {
+    icons: <IoSettingsOutline size={20} />,
+    label: "Settings",
   },
 ];
 
@@ -45,12 +60,13 @@ export default function DashboardSidebar() {
     <nav
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className={`shadow-md h-screen p-2 flex flex-col duration-500 bg-white text-gray-700 border-r border-r-gray-300 ${
+      style={{ height: "calc(100vh - 3.5rem)" }} // 3.5rem is the height of the header
+      className={`hidden fixed top-14 shadow-md h-screen p-2 lg:flex flex-col duration-500 bg-white text-gray-700 border-r border-r-gray-300 ${
         open ? "w-60" : "w-16"
       }`}
     >
       {/* Header */}
-      <div className="px-3 py-2 h-20 flex justify-between items-center">
+      {/* <div className="px-3 py-2 h-20 flex justify-between items-center">
         <div>
           <MdMenuOpen
             size={15}
@@ -58,7 +74,7 @@ export default function DashboardSidebar() {
             onClick={() => setOpen(!open)}
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Body */}
       <ul className="flex-1">
@@ -87,14 +103,14 @@ export default function DashboardSidebar() {
       </ul>
 
       {/* Footer */}
-      <div className="bg-white flex items-center gap-2 px-3 py-2">
+      <div className="bg-gray-300 flex items-center gap-2 px-3">
         <FaUserFriends size={15} />
         <div
           className={`leading-5 ${
             !open && "w-0 translate-x-24"
           } duration-200 overflow-hidden`}
         >
-          <span className="text-lg">Invite Your friends and earn Money</span>
+          <span className="text-sm">Invite Your friends and earn Money</span>
         </div>
       </div>
     </nav>

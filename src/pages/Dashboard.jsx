@@ -1,10 +1,15 @@
-import { DashboardHeader, DashboardSidebar } from "../components";
+import {
+  DashboardHeader,
+  DashboardSidebar,
+  DashboardBody,
+} from "../components";
 
 const Dashboard = () => {
   return (
     <div>
       <DashboardHeader />
       <DashboardSidebar />
+      <DashboardBody />
     </div>
   );
 };

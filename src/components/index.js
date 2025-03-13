@@ -40,6 +40,8 @@ import AboutUsImageTextSection from "./AboutUsImageTextSection";
 import Dashboard from "../pages/Dashboard";
 import DashboardHeader from "../dashboard/DashboardHeader";
 import DashboardSidebar from "../dashboard/DashboardSidebar";
+import DashboardBody from "../dashboard/DashboardBody";
+import Slider from "../dashboard/Slider";
 export {
   HeroSection,
   Articles,
@@ -83,4 +85,6 @@ export {
   Dashboard,
   DashboardHeader,
   DashboardSidebar,
+  DashboardBody,
+  Slider,
 };
