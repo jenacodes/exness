@@ -6,7 +6,8 @@ export default function Slider() {
   const slides = [
     {
       id: 0,
-      color: "",
+      color: "bg-slidesbg",
+      heading: "1000+ trading strategies",
       text: "Slide 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
@@ -37,9 +38,9 @@ export default function Slider() {
   };
 
   return (
-    <div className=" w-full max-w-xl mx-auto px-6 rounded-lg">
+    <div className=" w-full max-w-xl mx-auto px-6 rounded-lg lg:hidden relative">
       {/* Slider Container */}
-      <div className="relative overflow-hidden ">
+      <div className=" overflow-hidden ">
         {/* Slides Wrapper: shifting slides based on activeIndex */}
         <div
           className="flex transition-transform duration-500"
@@ -48,9 +49,20 @@ export default function Slider() {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className={`${slide.color} flex-shrink-0 w-full h-64 flex items-center justify-center`}
+              className={`${slide.color} flex-shrink-0 w-full h-30 flex items-center justify-center rounded-lg p-2`}
             >
-              <p className="text-black text-xl font-semibold">{slide.text}</p>
+              <div>
+                <h2 className="text-black text-base text-left font-semibold">
+                  {slide.heading}
+                </h2>
+                <p className="text-white text-sm ">{slide.text}</p>
+              </div>
+              <div
+                style={{
+                  backgroundImage: `url(https://my.ex-markets.pro/download/e8/e82ca/e82ca62e19c1241bb9224e4b3756eeae.webp)`,
+                }}
+                className="bg-cover bg-center bg-no-repeat  min-w-[100px] min-h-[100px]"
+              ></div>
             </div>
           ))}
         </div>
@@ -58,7 +70,7 @@ export default function Slider() {
         {/* Prev Button */}
         <button
           onClick={prevSlide}
-          className="fixed top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 bg-opacity-75 hover:bg-opacity-100 text-gray-800 font-bold p-2.5 rounded"
+          className="absolute top-1/3 left-0 transform -translate-y-1/2 bg-gray-200 bg-opacity-75 hover:bg-opacity-100 text-gray-500 font-bold p-2.5 rounded-full inline-flex items-center cursor-pointer backdrop-blur-sm"
         >
           <MdKeyboardArrowLeft />
         </button>
@@ -66,7 +78,7 @@ export default function Slider() {
         {/* Next Button */}
         <button
           onClick={nextSlide}
-          className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 bg-opacity-75 hover:bg-opacity-100 text-gray-800 font-bold p-2.5 rounded-full inline-flex items-center cursor-pointer backdrop-blur-sm"
+          className="absolute top-1/3 right-0 transform -translate-y-1/2 bg-gray-300 bg-opacity-75 hover:bg-opacity-100 text-gray-500 font-bold p-2.5 rounded-full inline-flex items-center cursor-pointer backdrop-blur-sm"
         >
           <MdKeyboardArrowRight />
         </button>
