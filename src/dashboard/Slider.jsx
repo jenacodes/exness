@@ -106,7 +106,7 @@ export default function Slider() {
         </div>
       </div>
       {/* Desktop Layout: visible only on large screens */}
-      <div className="hidden md:flex justify-between lg:px-12">
+      <div className="hidden justify-between lg:px-12">
         {slides.map((slide) => (
           <div
             key={slide.id}
