@@ -105,6 +105,28 @@ export default function Slider() {
           ))}
         </div>
       </div>
+      {/* Desktop Layout: visible only on large screens */}
+      <div className="hidden md:flex justify-between lg:px-12">
+        {slides.map((slide) => (
+          <div
+            key={slide.id}
+            className={`${slide.color} w-full h-28 flex items-center justify-between rounded-lg p-3.5 mx-1`}
+          >
+            <div>
+              {slide.heading && (
+                <h2 className="text-black text-base text-left font-semibold">
+                  {slide.heading}
+                </h2>
+              )}
+              <p className="text-black text-sm">{slide.text}</p>
+            </div>
+            <div
+              style={{ backgroundImage: `url(${slide.image})` }}
+              className="bg-cover bg-center bg-no-repeat min-w-[100px] min-h-[100px]"
+            ></div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
