@@ -1,6 +1,7 @@
 import {
   DashboardHeader,
   DashboardSidebar,
+  DashboardBodyHeader,
   DashboardBody,
 } from "../components";
 
@@ -9,6 +10,7 @@ const Dashboard = () => {
     <div>
       <DashboardHeader />
       <DashboardSidebar />
+      <DashboardBodyHeader />
       <DashboardBody />
     </div>
   );

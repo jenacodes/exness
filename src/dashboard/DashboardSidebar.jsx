@@ -61,7 +61,7 @@ export default function DashboardSidebar() {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       style={{ height: "calc(100vh - 3.5rem)" }} // 3.5rem is the height of the header
-      className={`hidden fixed top-14 shadow-md h-screen p-2 lg:flex flex-col duration-500 bg-white text-gray-700 border-r border-r-gray-300 ${
+      className={`z-50 hidden fixed top-14 shadow-md h-screen p-2 lg:flex flex-col duration-500 bg-white text-gray-700 border-r border-r-gray-300 ${
         open ? "w-60" : "w-16"
       }`}
     >

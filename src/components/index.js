@@ -40,6 +40,7 @@ import AboutUsImageTextSection from "./AboutUsImageTextSection";
 import Dashboard from "../pages/Dashboard";
 import DashboardHeader from "../dashboard/DashboardHeader";
 import DashboardSidebar from "../dashboard/DashboardSidebar";
+import DashboardBodyHeader from "../dashboard/DashboardBodyHeader";
 import DashboardBody from "../dashboard/DashboardBody";
 import Slider from "../dashboard/Slider";
 export {
@@ -85,6 +86,7 @@ export {
   Dashboard,
   DashboardHeader,
   DashboardSidebar,
+  DashboardBodyHeader,
   DashboardBody,
   Slider,
 };

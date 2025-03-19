@@ -1,32 +1,47 @@
-import { PiUserCircleDashed } from "react-icons/pi";
-import { Slider } from "../components";
+import { useState } from "react";
+import { AccountTypeDropdown } from "../components";
 
 const DashboardBody = () => {
-  return (
-    <div className=" pt-18 lg:pt-14 h-full">
-      <div className="lg:pl-16 flex flex-col gap-6 ">
-        <div className="py-4 border-b border-b-yellow-color bg-dashboard-header-bg">
-          <div className="px-4 w-full max-w-7xl">
-            <div className="flex flex-col lg:flex-row items-stretch lg:items-center">
-              <div className="flex items-center gap-4 flex-[1_1_auto]">
-                <PiUserCircleDashed size={50} />
-                <span className="text-base leading-6 ">
-                  Hello. Fill in your account details to make your first deposit
-                </span>
-              </div>
-              <div className="flex gap-4 mt-6 lg:mt-0">
-                <button className="flex-1 lg:flex-none inline-flex items-center justify-center cursor-pointer bg-light-gray px-4 py-2 rounded-md text-black min-w-20 min-h-10">
-                  Learn more
-                </button>
+  const [selectedAccountType, setSelectedAccountType] = useState("Real");
 
-                <button className="flex-1 inline-flex items-center justify-center cursor-pointer bg-primary px-4 py-2 rounded-md text-black">
-                  Complete Profile
+  //   // Callback when the dropdown changes.
+  //   const handleSelect = (option) => {
+  //     setSelectedAccountType(option);
+  //   };
+
+  const desktopOptions = ["Real", "Demo", "Archived"];
+  return (
+    <div className="px-4 mt-4 lg:mt-10 flex flex-col w-full lg:pl-28 lg:pr-10">
+      <div>
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-4 items-start">
+          <h2 className="text-black text-4xl font-bold">My accounts</h2>
+          <div>
+            <button className="inline-flex justify-center items-center cursor-pointer bg-gray-100 min-w-20 min-h-10 py-1.5 px-5">
+              + Open new account
+            </button>
+          </div>
+        </div>
+        <div className="min-h-12">
+          <div className="block">
+            <div className="flex border-b border-b-gray-200">
+              {desktopOptions.map((option) => (
+                <button
+                  key={option}
+                  onClick={() => setSelectedAccountType(option)}
+                  tabIndex={1}
+                  className={`inline-flex min-h-14 px-4 items-center cursor-pointer transition-colors duration-150   ${
+                    selectedAccountType === option
+                      ? "border-b-3 border-black text-black"
+                      : "hover:border-b-black text-gray-500"
+                  }`}
+                >
+                  {option}
                 </button>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-        <Slider />
+        <AccountTypeDropdown options={["Newest", "Premium", "Enterprise"]} />
       </div>
     </div>
   );

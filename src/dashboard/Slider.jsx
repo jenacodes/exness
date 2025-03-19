@@ -93,7 +93,7 @@ export default function Slider() {
         </div>
 
         {/* Indicator Buttons */}
-        <div className="flex justify-center mt-3 space-x-2 lg:hidden">
+        <div className="flex justify-center my-3 space-x-2 lg:hidden">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -106,7 +106,7 @@ export default function Slider() {
         </div>
       </div>
       {/* Desktop Layout: visible only on large screens */}
-      <div className="hidden justify-between lg:px-12">
+      <div className="hidden justify-between lg:px-12 lg:flex">
         {slides.map((slide) => (
           <div
             key={slide.id}
