@@ -43,6 +43,7 @@ import DashboardSidebar from "../dashboard/DashboardSidebar";
 import DashboardBodyHeader from "../dashboard/DashboardBodyHeader";
 import DashboardBody from "../dashboard/DashboardBody";
 import Slider from "../dashboard/Slider";
+import ToggleButton from "../dashboard/ToggleButton";
 export {
   HeroSection,
   Articles,
@@ -89,4 +90,5 @@ export {
   DashboardBodyHeader,
   DashboardBody,
   Slider,
+  ToggleButton,
 };

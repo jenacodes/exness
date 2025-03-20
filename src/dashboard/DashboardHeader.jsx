@@ -38,7 +38,7 @@ const DashboardHeader = () => {
         <div className="flex items-center h-full">
           <div className="flex gap-1">
             <div className="text-sm leading-5 font-semibold tracking-wider">
-              100000.00
+              00.00
             </div>
             <div className="text-sm leading-5 font-semibold tracking-wider">
               USD

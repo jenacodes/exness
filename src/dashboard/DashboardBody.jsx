@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AccountTypeDropdown } from "../components";
+import { AccountTypeDropdown, ToggleButton } from "../components";
 
 const DashboardBody = () => {
   const [selectedAccountType, setSelectedAccountType] = useState("Real");
@@ -21,7 +21,7 @@ const DashboardBody = () => {
             </button>
           </div>
         </div>
-        <div className="min-h-12">
+        <div className="min-h-12 mb-6">
           <div className="block">
             <div className="flex border-b border-b-gray-200">
               {desktopOptions.map((option) => (
@@ -41,7 +41,13 @@ const DashboardBody = () => {
             </div>
           </div>
         </div>
-        <AccountTypeDropdown options={["Newest", "Premium", "Enterprise"]} />
+        <div className="flex justify-between items-center">
+          <AccountTypeDropdown
+            options={["Newest", "Premium", "Enterprise"]}
+            defaultOption="Newest"
+          />
+          <ToggleButton />
+        </div>
       </div>
     </div>
   );

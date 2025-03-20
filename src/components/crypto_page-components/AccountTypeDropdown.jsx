@@ -39,8 +39,8 @@ const AccountTypeDropdown = ({
     <div className={`relative ${className}`} ref={dropdownRef}>
       <button
         type="button"
-        className={`lg:hidden w-full px-4 py-2.5 text-left bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:bg-gray-200 transition-all duration-150 flex justify-between ${
-          isDashboardPage && "lg:w-44 lg:block"
+        className={` w-full px-4 py-2.5 text-left bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:bg-gray-200 transition-all duration-150 flex justify-between ${
+          isDashboardPage ? "lg:w-44 lg:flex" : "lg:hidden"
         }`}
         onClick={() => setIsOpen(!isOpen)}
         aria-haspopup="listbox"
