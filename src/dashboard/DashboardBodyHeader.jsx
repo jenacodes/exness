@@ -1,5 +1,5 @@
 import { PiUserCircleDashed } from "react-icons/pi";
-import { Slider } from "../components";
+import { DashboardYellowBtn, Slider } from "../components";
 
 const DashboardBodyHeader = () => {
   return (
@@ -18,10 +18,7 @@ const DashboardBodyHeader = () => {
                 <button className="flex-1 lg:flex-none inline-flex items-center justify-center cursor-pointer bg-light-gray px-4 py-2 rounded-md text-black min-w-20 min-h-10">
                   Learn more
                 </button>
-
-                <button className="flex-1 inline-flex items-center justify-center cursor-pointer bg-primary px-4 py-2 rounded-md text-black">
-                  Complete Profile
-                </button>
+                <DashboardYellowBtn text="Complete Profile" />
               </div>
             </div>
           </div>

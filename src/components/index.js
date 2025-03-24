@@ -12,6 +12,7 @@ import Header from "./header/Header";
 import Opportunity from "./Opportunity";
 import Security from "./Security";
 import SignInButton from "./buttons/SignInButton";
+import DashboardYellowBtn from "./buttons/DashboardYellowBtn";
 import Thrive from "./Thrive";
 import LoginPage from "../pages/LoginPage";
 import StandardAccounts from "../pages/StandardAccounts";
@@ -44,6 +45,7 @@ import DashboardBodyHeader from "../dashboard/DashboardBodyHeader";
 import DashboardBody from "../dashboard/DashboardBody";
 import Slider from "../dashboard/Slider";
 import ToggleButton from "../dashboard/ToggleButton";
+import AccountsSection from "../dashboard/AccountsSection";
 export {
   HeroSection,
   Articles,
@@ -91,4 +93,6 @@ export {
   DashboardBody,
   Slider,
   ToggleButton,
+  DashboardYellowBtn,
+  AccountsSection,
 };

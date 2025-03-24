@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { AccountTypeDropdown, ToggleButton } from "../components";
+import {
+  AccountTypeDropdown,
+  DashboardYellowBtn,
+  ToggleButton,
+} from "../components";
+import { FaInbox } from "react-icons/fa";
 
 const DashboardBody = () => {
   const [selectedAccountType, setSelectedAccountType] = useState("Real");
@@ -47,6 +52,15 @@ const DashboardBody = () => {
             defaultOption="Newest"
           />
           <ToggleButton />
+        </div>
+        <div className="py-[100px] flex justify-center items-center">
+          <div className="flex flex-col items-center">
+            <FaInbox size={60} color="#ffe535" />
+            <h3 className="text-black text-base mt-4 mb-4">
+              You don&apos;t have any real accounts
+            </h3>
+            <DashboardYellowBtn text="Open New account" />
+          </div>
         </div>
       </div>
     </div>

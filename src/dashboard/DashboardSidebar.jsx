@@ -1,8 +1,5 @@
 import { useState } from "react";
-// import logo from "../logo.png";
-
 // icons
-
 import { FaUserFriends } from "react-icons/fa";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
@@ -55,6 +52,7 @@ const menuItems = [
 
 export default function DashboardSidebar() {
   const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("My account");
 
   return (
     <nav
@@ -65,23 +63,17 @@ export default function DashboardSidebar() {
         open ? "w-60" : "w-16"
       }`}
     >
-      {/* Header */}
-      {/* <div className="px-3 py-2 h-20 flex justify-between items-center">
-        <div>
-          <MdMenuOpen
-            size={15}
-            className={`duration-500 cursor-pointer ${!open && "rotate-180"}`}
-            onClick={() => setOpen(!open)}
-          />
-        </div>
-      </div> */}
-
       {/* Body */}
       <ul className="flex-1">
         {menuItems.map((item, index) => (
           <li
             key={index}
-            className="px-3 py-2 my-2 hover:bg-gray-300 rounded-md duration-300 cursor-pointer flex gap-2 items-center relative group"
+            onClick={() => setSelected(item.label)}
+            className={`px-3 py-2 my-2 cursor-pointer flex gap-2 items-center relative group rounded-md duration-300 ${
+              selected === item.label
+                ? "bg-gray-200"
+                : "hover:border border-gray-500 hover:bg-gray-100 "
+            }`}
           >
             <div>{item.icons}</div>
             <p
