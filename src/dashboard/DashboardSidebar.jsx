@@ -18,7 +18,7 @@ const menuItems = [
   },
   {
     icons: <IoArrowDownCircleOutline size={20} />,
-    label: "Products",
+    label: "Deposit",
   },
   {
     icons: <CgArrowTopRightO size={20} />,
@@ -95,7 +95,7 @@ export default function DashboardSidebar() {
       </ul>
 
       {/* Footer */}
-      <div className="bg-gray-300 flex items-center gap-2 px-3">
+      <div className="bg-sidebar flex items-center gap-2 px-3">
         <FaUserFriends size={15} />
         <div
           className={`leading-5 ${

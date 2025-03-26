@@ -46,6 +46,7 @@ import DashboardBody from "../dashboard/DashboardBody";
 import Slider from "../dashboard/Slider";
 import ToggleButton from "../dashboard/ToggleButton";
 import AccountsSection from "../dashboard/AccountsSection";
+import DashboardFooter from "../dashboard/DashboardFooter";
 export {
   HeroSection,
   Articles,
@@ -91,6 +92,7 @@ export {
   DashboardSidebar,
   DashboardBodyHeader,
   DashboardBody,
+  DashboardFooter,
   Slider,
   ToggleButton,
   DashboardYellowBtn,

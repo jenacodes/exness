@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   AccountTypeDropdown,
+  DashboardFooter,
   DashboardYellowBtn,
   ToggleButton,
 } from "../components";
@@ -63,6 +64,7 @@ const DashboardBody = () => {
           </div>
         </div>
       </div>
+      <DashboardFooter />
     </div>
   );
 };
