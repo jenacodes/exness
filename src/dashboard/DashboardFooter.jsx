@@ -16,7 +16,7 @@ const DashboardFooter = () => {
   ];
 
   return (
-    <footer className="my-16 ">
+    <footer className="my-16">
       <div className="grid gap-8 my-16 lg:grid-cols-[7fr_1fr_3fr]">
         {/* Left Column: Legal Texts */}
         <div>

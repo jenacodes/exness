@@ -47,6 +47,8 @@ import Slider from "../dashboard/Slider";
 import ToggleButton from "../dashboard/ToggleButton";
 import AccountsSection from "../dashboard/AccountsSection";
 import DashboardFooter from "../dashboard/DashboardFooter";
+import DashboardContent from "../dashboard/DashboardContent";
+import DepositsSection from "../dashboard/DepositsSection";
 export {
   HeroSection,
   Articles,
@@ -97,4 +99,6 @@ export {
   ToggleButton,
   DashboardYellowBtn,
   AccountsSection,
+  DashboardContent,
+  DepositsSection,
 };

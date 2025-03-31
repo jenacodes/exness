@@ -1,5 +1,5 @@
 import { PiUserCircleDashed } from "react-icons/pi";
-import { DashboardYellowBtn, Slider } from "../components";
+import { DashboardYellowBtn } from "../components";
 
 const DashboardBodyHeader = () => {
   return (
@@ -23,7 +23,6 @@ const DashboardBodyHeader = () => {
             </div>
           </div>
         </div>
-        <Slider />
       </div>
     </div>
   );

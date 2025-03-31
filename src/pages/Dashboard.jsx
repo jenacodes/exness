@@ -1,17 +1,21 @@
+import { useState } from "react";
+
 import {
   DashboardHeader,
   DashboardSidebar,
   DashboardBodyHeader,
-  DashboardBody,
+  DashboardContent,
 } from "../components";
 
 const Dashboard = () => {
+  const [selected, setSelected] = useState("My account");
   return (
     <div>
       <DashboardHeader />
-      <DashboardSidebar />
+      <DashboardSidebar selected={selected} onSelect={setSelected} />
       <DashboardBodyHeader />
-      <DashboardBody />
+      <DashboardContent selected={selected} />
+      {/* <DashboardBody /> */}
     </div>
   );
 };

@@ -46,6 +46,7 @@ export default function Slider() {
 
   return (
     <>
+      {/* Mobile Layout: visible only on small screens */}
       <div className="w-full px-6 rounded-lg  relative lg:hidden">
         {/* Slider Container */}
         <div className="overflow-hidden">
@@ -106,7 +107,7 @@ export default function Slider() {
         </div>
       </div>
       {/* Desktop Layout: visible only on large screens */}
-      <div className="hidden justify-between lg:px-12 lg:flex">
+      <div className="hidden justify-between lg:pl-20 lg:flex">
         {slides.map((slide) => (
           <div
             key={slide.id}
