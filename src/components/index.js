@@ -49,6 +49,7 @@ import AccountsSection from "../dashboard/AccountsSection";
 import DashboardFooter from "../dashboard/DashboardFooter";
 import DashboardContent from "../dashboard/DashboardContent";
 import DepositsSection from "../dashboard/DepositsSection";
+import PaymentMethodCard from "../dashboard/PaymentMethodCard";
 export {
   HeroSection,
   Articles,
@@ -101,4 +102,5 @@ export {
   AccountsSection,
   DashboardContent,
   DepositsSection,
+  PaymentMethodCard,
 };
