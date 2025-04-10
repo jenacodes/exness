@@ -12,8 +12,8 @@ import { useState } from "react";
 
 const menuItems = [
   { icons: <LuLayoutDashboard size={20} />, label: "My account" },
-  { icons: <IoArrowDownCircleOutline size={20} />, label: "Deposit" },
-  { icons: <CgArrowTopRightO size={20} />, label: "Dashboard" },
+  { icons: <IoArrowDownCircleOutline size={22} />, label: "Deposit" },
+  { icons: <CgArrowTopRightO size={20} />, label: "Withdrawal" },
   { icons: <RxCountdownTimer size={20} />, label: "Setting" },
   { icons: <HiOutlineNewspaper size={20} />, label: "Log" },
   { icons: <BiSolidUserAccount size={20} />, label: "Report" },

@@ -1,5 +1,6 @@
 import DashboardBody from "./DashboardBody";
 import DepositsSection from "./DepositsSection";
+import WithdrawalSection from "./WithdrawalSection";
 
 // eslint-disable-next-line react/prop-types
 const DashboardContent = ({ selected }) => {
@@ -12,13 +13,8 @@ const DashboardContent = ({ selected }) => {
     case "My account":
       content = <DashboardBody />;
       break;
-    case "Dashboard":
-      content = (
-        <div>
-          <h1>Dashboard</h1>
-          <p>This is your dashboard.</p>
-        </div>
-      );
+    case "Withdrawal":
+      content = <WithdrawalSection />;
       break;
     case "Setting":
       content = (
