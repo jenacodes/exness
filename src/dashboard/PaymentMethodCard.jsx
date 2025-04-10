@@ -12,7 +12,7 @@ const PaymentMethodCard = ({ icon, title, verification, details }) => {
           <p className="text-gray-500 text-base font-semibold">{title}</p>
           <div className="inline-flex items-center gap-2 rounded-lg bg-[#FFFCF2] lg:p-1">
             <CiLock size={15} color="gray" />
-            <p className="text-gray-400 text-sm">{verification}</p>
+            <p className="text-yellow-900 text-xs">{verification}</p>
           </div>
         </div>
         <div className="flex flex-col gap-1">

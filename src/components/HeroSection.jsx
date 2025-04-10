@@ -28,7 +28,7 @@ const HeroSection = () => {
         ></video>
         <div className="flex flex-col items-center md:flex-row gap-2.5">
           <RegisterButton text={"Register"} />
-          <Link to={"acctPage/login"}>
+          <Link to={"/login"}>
             <SignInButton text={"Sign in"} />
           </Link>
         </div>
