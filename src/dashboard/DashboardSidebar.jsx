@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { CgArrowTopRightO } from "react-icons/cg";
@@ -8,7 +11,6 @@ import { HiOutlineChartBar } from "react-icons/hi";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaUserFriends } from "react-icons/fa";
-import { useState } from "react";
 
 const menuItems = [
   { icons: <LuLayoutDashboard size={20} />, label: "My account" },
@@ -22,15 +24,25 @@ const menuItems = [
   { icons: <IoSettingsOutline size={20} />, label: "Settings" },
 ];
 
-// eslint-disable-next-line react/prop-types
 export default function DashboardSidebar({ selected, onSelect }) {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  // Combine onSelect and navigation in the click handler.
+  const handleClick = (label) => {
+    if (onSelect) {
+      onSelect(label);
+    }
+    // Convert the label to a route-friendly string.
+    const route = label.toLowerCase().replace(/\s+/g, "");
+    navigate(`/dashboard/${route}`);
+  };
 
   return (
     <nav
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      style={{ height: "calc(100vh - 3.5rem)" }} // 3.5rem is the header height
+      style={{ height: "calc(100vh - 3.5rem)" }}
       className={`z-50 hidden fixed top-14 shadow-md h-screen p-2 lg:flex flex-col duration-500 bg-white text-gray-700 border-r border-r-gray-300 ${
         open ? "w-60" : "w-16"
       }`}
@@ -40,7 +52,7 @@ export default function DashboardSidebar({ selected, onSelect }) {
         {menuItems.map((item, index) => (
           <li
             key={index}
-            onClick={() => onSelect(item.label)}
+            onClick={() => handleClick(item.label)}
             className={`px-3 py-2 my-2 rounded-md duration-300 cursor-pointer flex gap-2 items-center relative group ${
               selected === item.label
                 ? "bg-gray-200"

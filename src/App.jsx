@@ -1,3 +1,4 @@
+// App.jsx
 import { Routes, Route } from "react-router-dom";
 import {
   Home,
@@ -12,8 +13,14 @@ import {
   ForexPage,
   AboutUs,
   Dashboard,
+  // DashboardBody,
 } from "./pages";
 import ScrollToTop from "./components/ScrollToTop";
+import {
+  MyAccountsSection,
+  DepositsSection,
+  WithdrawalSection,
+} from "./components";
 
 function App() {
   return (
@@ -41,7 +48,15 @@ function App() {
         <Route path="/stocks-cfd" element={<StocksPage />} />
         <Route path="/forex-cfd" element={<ForexPage />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Dashboard route with nested children */}
+        <Route path="/dashboard" element={<Dashboard />}>
+          {/* <Route index element={<DashboardBody />} /> */}
+          <Route path="deposit" element={<DepositsSection />} />
+          <Route path="myaccount" element={<MyAccountsSection />} />
+          <Route path="withdrawal" element={<WithdrawalSection />} />
+          {/* <Route path="setting" element={<SettingsPage />} /> */}
+        </Route>
       </Routes>
     </>
   );

@@ -15,7 +15,7 @@ const DashboardHeader = () => {
         <button className="text-2xl">
           <i className="ri-menu-line"></i>
         </button>
-        <a href="/">
+        <a href="/dashboard">
           <img
             src="\exness.svg"
             alt="Exness logo"
@@ -28,7 +28,7 @@ const DashboardHeader = () => {
       </div>
       {/* Desktop Header */}
       <div className="px-4 py-2 hidden lg:flex items-center justify-between ">
-        <a href="/">
+        <a href="/dashboard">
           <img
             src="\exness.svg"
             alt="Exness logo"

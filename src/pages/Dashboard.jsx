@@ -6,6 +6,7 @@ import {
   DashboardBodyHeader,
   DashboardContent,
 } from "../components";
+import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   const [selected, setSelected] = useState("My account");
@@ -15,7 +16,7 @@ const Dashboard = () => {
       <DashboardSidebar selected={selected} onSelect={setSelected} />
       <DashboardBodyHeader />
       <DashboardContent selected={selected} />
-      {/* <DashboardBody /> */}
+      <Outlet />
     </div>
   );
 };

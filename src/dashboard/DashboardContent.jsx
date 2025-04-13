@@ -1,4 +1,4 @@
-import DashboardBody from "./DashboardBody";
+import DashboardBody from "../dashboard/DashboardBody";
 import DepositsSection from "./DepositsSection";
 import WithdrawalSection from "./WithdrawalSection";
 
@@ -16,7 +16,7 @@ const DashboardContent = ({ selected }) => {
     case "Withdrawal":
       content = <WithdrawalSection />;
       break;
-    case "Setting":
+    case "":
       content = (
         <div>
           <h1>Setting</h1>
