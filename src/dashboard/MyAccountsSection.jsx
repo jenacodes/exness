@@ -11,7 +11,7 @@ const MyAccountsSection = ({ selectedAccountType, onAccountTypeChange }) => {
   const desktopOptions = ["Real", "Demo", "Archived"];
 
   return (
-    <div className="px-4 mt-4 lg:mt-10 flex flex-col w-full lg:pl-28 lg:pr-10">
+    <div className="px-4 mt-4 lg:mt-14 flex flex-col w-full lg:pl-28 lg:pr-10">
       <div>
         <div className="flex flex-col lg:flex-row lg:justify-between gap-4 items-start">
           <h2 className="text-black text-4xl font-bold">My accounts</h2>

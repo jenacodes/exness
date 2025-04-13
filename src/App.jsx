@@ -1,5 +1,5 @@
 // App.jsx
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import {
   Home,
   AcctPage,
@@ -21,8 +21,10 @@ import {
   DepositsSection,
   WithdrawalSection,
 } from "./components";
+import { useState } from "react";
 
 function App() {
+  const [selectedAccountType, setSelectedAccountType] = useState("Real");
   return (
     <>
       <ScrollToTop />
@@ -51,9 +53,17 @@ function App() {
 
         {/* Dashboard route with nested children */}
         <Route path="/dashboard" element={<Dashboard />}>
-          {/* <Route index element={<DashboardBody />} /> */}
+          <Route index element={<Navigate to="myaccount" replace />} />
           <Route path="deposit" element={<DepositsSection />} />
-          <Route path="myaccount" element={<MyAccountsSection />} />
+          <Route
+            path="myaccount"
+            element={
+              <MyAccountsSection
+                selectedAccountType={selectedAccountType}
+                onAccountTypeChange={setSelectedAccountType}
+              />
+            }
+          />
           <Route path="withdrawal" element={<WithdrawalSection />} />
           {/* <Route path="setting" element={<SettingsPage />} /> */}
         </Route>

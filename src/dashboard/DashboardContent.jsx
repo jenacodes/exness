@@ -1,9 +1,11 @@
-import DashboardBody from "../dashboard/DashboardBody";
+import { useState } from "react";
 import DepositsSection from "./DepositsSection";
+import MyAccountsSection from "./MyAccountsSection";
 import WithdrawalSection from "./WithdrawalSection";
 
 // eslint-disable-next-line react/prop-types
 const DashboardContent = ({ selected }) => {
+  const [selectedAccountType, setSelectedAccountType] = useState("Real");
   let content;
 
   switch (selected) {
@@ -11,7 +13,12 @@ const DashboardContent = ({ selected }) => {
       content = <DepositsSection />;
       break;
     case "My account":
-      content = <DashboardBody />;
+      content = (
+        <MyAccountsSection
+          selectedAccountType={selectedAccountType}
+          onAccountTypeChange={setSelectedAccountType}
+        />
+      );
       break;
     case "Withdrawal":
       content = <WithdrawalSection />;
