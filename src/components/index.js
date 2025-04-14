@@ -47,7 +47,7 @@ import Slider from "../dashboard/Slider";
 import ToggleButton from "../dashboard/ToggleButton";
 import AccountsSection from "../dashboard/AccountsSection";
 import DashboardFooter from "../dashboard/DashboardFooter";
-import DashboardContent from "../dashboard/DashboardContent";
+// import DashboardContent from "../dashboard/DashboardContent";
 import DepositsSection from "../dashboard/DepositsSection";
 import PaymentMethodCard from "../dashboard/PaymentMethodCard";
 import WithdrawalSection from "../dashboard/WithdrawalSection";
@@ -102,7 +102,7 @@ export {
   ToggleButton,
   DashboardYellowBtn,
   AccountsSection,
-  DashboardContent,
+  // DashboardContent,
   DepositsSection,
   PaymentMethodCard,
   WithdrawalSection,
