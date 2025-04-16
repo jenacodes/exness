@@ -16,7 +16,6 @@ const WithdrawalSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/neteller/48/True.svg",
       title: "Neteller",
-
       details: {
         processingTime: "1-2 business days",
         fee: "0%",
@@ -36,7 +35,6 @@ const WithdrawalSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/sticpay/48/True.svg",
       title: "Sticpay",
-      verification: "Unavailable",
       details: {
         processingTime: "Instant - 1 day",
         fee: "0%",
@@ -45,6 +43,63 @@ const WithdrawalSection = () => {
     },
 
     // Add more cards as needed...
+  ];
+
+  const TransferCard = [
+    {
+      imgSrc:
+        "https://pp.ekspp.com/cdn/pm-icons/custom-transfer-in-circle/48/False.svg",
+      title: "Between Your Accounts",
+      verification: "Unavaliable",
+      details: {
+        processingTime: "Instant - 1 day",
+        fee: "0%",
+        limits: "1 - 1000000",
+      },
+    },
+  ];
+
+  const VerificationCard = [
+    {
+      imgSrc: "https://pp.ekspp.com/cdn/pm-icons/usdt-trc20/48/False.svg",
+      title: "Tether (USDT TRC 20)",
+      verification: "Unavaliable",
+      details: {
+        processingTime: "Instant - 15 minutes",
+        fee: "0%",
+        limits: "1 - 1000000 USD",
+      },
+    },
+    {
+      imgSrc: "https://pp.ekspp.com/cdn/pm-icons/bitcoin/48/False.svg",
+      title: "Bitcoin (BTC)",
+      verification: "Unavaliable",
+      details: {
+        processingTime: "Instant - 1 hour",
+        fee: "0%",
+        limits: "200 - 1,000,000 USD",
+      },
+    },
+    {
+      imgSrc: "https://pp.ekspp.com/cdn/pm-icons/usdt-trc20/48/False.svg",
+      title: "Tether (USDT ERC 20)",
+      verification: "Unavaliable",
+      details: {
+        processingTime: "Instant - 15 minutes",
+        fee: "0%",
+        limits: "1 - 1,000,000 USD",
+      },
+    },
+    {
+      imgSrc: "https://pp.ekspp.com/cdn/pm-icons/usdc-erc20/48/False.svg",
+      title: "USD Coin (USDC ERC 20)",
+      verification: "Unavaliable",
+      details: {
+        processingTime: "Instant - 15 minutes",
+        fee: "0%",
+        limits: "1 - 1,000,000 USD",
+      },
+    },
   ];
 
   return (
@@ -65,9 +120,45 @@ const WithdrawalSection = () => {
               verification={card.verification}
               details={card.details}
               type={"withdrawal"}
+              isWithdrawal={true}
             />
           ))}
         </div>
+
+        <div className="my-6 flex flex-col gap-4">
+          <h3 className="text-2xl font-semibold tracking-wide leading-7">
+            Transfer
+          </h3>
+          <div className="grid gap-y-4 mb-10 grid-cols-[repeat(auto-fill,minmax(480px,1fr))] gap-6">
+            {TransferCard.map((card, index) => (
+              <PaymentMethodCard
+                key={index}
+                imgSrc={card.imgSrc}
+                title={card.title}
+                verification={card.verification}
+                details={card.details}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="my-6 flex flex-col gap-4">
+          <h3 className="text-2xl font-semibold tracking-wide leading-7">
+            Verification required
+          </h3>
+          <div className="grid gap-y-4 mb-10 grid-cols-[repeat(auto-fill,minmax(480px,1fr))] gap-6">
+            {VerificationCard.map((card, index) => (
+              <PaymentMethodCard
+                key={index}
+                imgSrc={card.imgSrc}
+                title={card.title}
+                verification={card.verification}
+                details={card.details}
+              />
+            ))}
+          </div>
+        </div>
+
         <DashboardFooter />
       </div>
     </div>
