@@ -4,11 +4,11 @@ import { CiLock } from "react-icons/ci";
 
 const PaymentMethodCard = ({ imgSrc, title, verification, details, type }) => {
   const textColor =
-    verification === "Unavaliable" ? "text-gray-500" : "text-black";
+    verification === "Unavailable" ? "text-gray-500" : "text-black";
   const titleColor =
-    verification == "Unavaliable" ? "text-gray-500" : "text-black";
+    verification == "Unavailable" ? "text-gray-500" : "text-black";
   return (
-    <div className="flex gap-6 lg:p-6 border border-gray-300 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+    <div className="flex gap-6 lg:p-6 p-3 border border-gray-300 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
       <div className="w-12 h-12  flex items-center justify-center flex-shrink-0">
         <img src={imgSrc} alt={title} />
       </div>

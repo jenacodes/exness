@@ -6,7 +6,7 @@ const DepositsSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/online-transfer/48/False.svg",
       title: "Online Bank Transfer",
-      verification: "Unavailiable",
+      verification: "Unavailable",
       details: {
         processingTime: "1-2 business days",
         fee: "0%",
@@ -75,7 +75,7 @@ const DepositsSection = () => {
         <h3 className="text-xl font-semibold tracking-wide leading-7">
           Verification required
         </h3>
-        <div className="grid gap-y-4 mb-10 grid-cols-[repeat(auto-fill,minmax(480px,1fr))] gap-6">
+        <div className="grid gap-y-4 mb-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
           {cards.map((card, index) => (
             <PaymentMethodCard
               key={index}

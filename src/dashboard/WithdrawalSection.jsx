@@ -50,7 +50,7 @@ const WithdrawalSection = () => {
       imgSrc:
         "https://pp.ekspp.com/cdn/pm-icons/custom-transfer-in-circle/48/False.svg",
       title: "Between Your Accounts",
-      verification: "Unavaliable",
+      verification: "Unavailable",
       details: {
         processingTime: "Instant - 1 day",
         fee: "0%",
@@ -63,7 +63,7 @@ const WithdrawalSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/usdt-trc20/48/False.svg",
       title: "Tether (USDT TRC 20)",
-      verification: "Unavaliable",
+      verification: "Unavailable",
       details: {
         processingTime: "Instant - 15 minutes",
         fee: "0%",
@@ -73,7 +73,7 @@ const WithdrawalSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/bitcoin/48/False.svg",
       title: "Bitcoin (BTC)",
-      verification: "Unavaliable",
+      verification: "Unavailable",
       details: {
         processingTime: "Instant - 1 hour",
         fee: "0%",
@@ -83,7 +83,7 @@ const WithdrawalSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/usdt-trc20/48/False.svg",
       title: "Tether (USDT ERC 20)",
-      verification: "Unavaliable",
+      verification: "Unavailable",
       details: {
         processingTime: "Instant - 15 minutes",
         fee: "0%",
@@ -93,7 +93,7 @@ const WithdrawalSection = () => {
     {
       imgSrc: "https://pp.ekspp.com/cdn/pm-icons/usdc-erc20/48/False.svg",
       title: "USD Coin (USDC ERC 20)",
-      verification: "Unavaliable",
+      verification: "Unavailable",
       details: {
         processingTime: "Instant - 15 minutes",
         fee: "0%",
@@ -111,7 +111,7 @@ const WithdrawalSection = () => {
         <h3 className="text-2xl font-semibold tracking-wide leading-7">
           All payment methods
         </h3>
-        <div className="grid gap-y-4 mb-10 grid-cols-[repeat(auto-fill,minmax(480px,1fr))] gap-6">
+        <div className="grid gap-y-4 mb-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
           {cards.map((card, index) => (
             <PaymentMethodCard
               key={index}
@@ -120,7 +120,6 @@ const WithdrawalSection = () => {
               verification={card.verification}
               details={card.details}
               type={"withdrawal"}
-              isWithdrawal={true}
             />
           ))}
         </div>
@@ -129,7 +128,7 @@ const WithdrawalSection = () => {
           <h3 className="text-2xl font-semibold tracking-wide leading-7">
             Transfer
           </h3>
-          <div className="grid gap-y-4 mb-10 grid-cols-[repeat(auto-fill,minmax(480px,1fr))] gap-6">
+          <div className="grid gap-y-4 mb-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
             {TransferCard.map((card, index) => (
               <PaymentMethodCard
                 key={index}
@@ -146,7 +145,7 @@ const WithdrawalSection = () => {
           <h3 className="text-2xl font-semibold tracking-wide leading-7">
             Verification required
           </h3>
-          <div className="grid gap-y-4 mb-10 grid-cols-[repeat(auto-fill,minmax(480px,1fr))] gap-6">
+          <div className="grid gap-y-4 mb-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
             {VerificationCard.map((card, index) => (
               <PaymentMethodCard
                 key={index}
