@@ -52,6 +52,7 @@ import DepositsSection from "../dashboard/DepositsSection";
 import PaymentMethodCard from "../dashboard/PaymentMethodCard";
 import WithdrawalSection from "../dashboard/WithdrawalSection";
 import MyAccountsSection from "../dashboard/MyAccountsSection";
+import MobilePhoneSidebar from "../dashboard/MobilePhoneSidebar";
 export {
   HeroSection,
   Articles,
@@ -107,4 +108,5 @@ export {
   PaymentMethodCard,
   WithdrawalSection,
   MyAccountsSection,
+  MobilePhoneSidebar,
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MobilePhoneSidebar from "./MobilePhoneSidebar";
 
 const DashboardHeader = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -71,33 +72,7 @@ const DashboardHeader = () => {
         </div>
       </header>
 
-      {/* Sidebar Drawer */}
-      <div
-        className={`
-          fixed top-15 left-0 h-screen max-w-xs w-full
-          bg-white/50 backdrop-blur-lg shadow-xl p-6
-          transform transition-transform transition-opacity duration-300 ease-in-out
-          z-50
-          ${
-            sidebarOpen
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
-          }
-        `}
-      >
-        {/* Sidebar Links */}
-        <nav className="flex flex-col gap-3">
-          <a href="/dashboard" className="px-2 py-1 rounded hover:bg-gray-400">
-            Dashboard
-          </a>
-          <a href="withdrawal" className="px-2 py-1 rounded hover:bg-gray-100">
-            withdrawal
-          </a>
-          <a href="/settings" className="px-2 py-1 rounded hover:bg-gray-100">
-            Settings
-          </a>
-        </nav>
-      </div>
+      <MobilePhoneSidebar sidebarOpen={sidebarOpen} />
 
       {/* Backdrop */}
       {sidebarOpen && (
