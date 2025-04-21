@@ -53,6 +53,7 @@ import PaymentMethodCard from "../dashboard/PaymentMethodCard";
 import WithdrawalSection from "../dashboard/WithdrawalSection";
 import MyAccountsSection from "../dashboard/MyAccountsSection";
 import MobilePhoneSidebar from "../dashboard/MobilePhoneSidebar";
+import SidebarComponent from "../dashboard/SidebarComponent";
 export {
   HeroSection,
   Articles,
@@ -109,4 +110,5 @@ export {
   WithdrawalSection,
   MyAccountsSection,
   MobilePhoneSidebar,
+  SidebarComponent,
 };

@@ -1,7 +1,8 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import MobilePhoneSidebar from "./MobilePhoneSidebar";
 
-const DashboardHeader = () => {
+const DashboardHeader = ({ selected, onSelect }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // Define the icons for the desktop header as an array
   const desktopIcons = [
@@ -72,7 +73,12 @@ const DashboardHeader = () => {
         </div>
       </header>
 
-      <MobilePhoneSidebar sidebarOpen={sidebarOpen} />
+      <MobilePhoneSidebar
+        sidebarOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        onSelect={onSelect}
+        selected={selected}
+      />
 
       {/* Backdrop */}
       {sidebarOpen && (
@@ -83,6 +89,11 @@ const DashboardHeader = () => {
       )}
     </>
   );
+};
+
+DashboardHeader.propTypes = {
+  selected: PropTypes.any.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default DashboardHeader;

@@ -1,15 +1,53 @@
 /* eslint-disable react/prop-types */
 import { HiOutlineUserCircle } from "react-icons/hi2";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { LuWallet } from "react-icons/lu";
-const MobilePhoneSidebar = ({ sidebarOpen }) => {
+
+import SidebarComponent from "./SidebarComponent";
+
+const MobilePhoneSidebar = ({ sidebarOpen, onSelect, onClose, selected }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && sidebarOpen) {
+        onClose();
+      }
+    };
+
+    if (sidebarOpen) {
+      document.body.classList.add("overflow-hidden");
+      window.addEventListener("resize", handleResize);
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [sidebarOpen, onClose]);
+
+  // Combine onSelect and navigation in the click handler.
+  const handleClick = (label) => {
+    if (onSelect) onSelect(label);
+
+    const route = label.toLowerCase().replace(/\s+/g, "");
+    navigate(`/dashboard/${route}`);
+
+    if (onClose) onClose();
+  };
+
   return (
     <div
       className={`
-      fixed top-19 left-0 h-screen max-w-xs w-full
+      fixed top-19 left-0 bottom-0 max-w-xs w-full
       bg-white backdrop-blur-lg shadow-xl p-2
-      transform transition-transform transition-opacity duration-300 ease-in-out
-      z-50
+      transform transition-transform  duration-300 ease-in-out
+      z-50 overflow-y-auto
+      md:hidden md:backdrop-blur-none
       ${
         sidebarOpen
           ? "translate-x-0 opacity-100"
@@ -39,15 +77,7 @@ const MobilePhoneSidebar = ({ sidebarOpen }) => {
           </div>
         </div>
         <hr className=" border-gray-200" />
-        <a href="/dashboard" className="px-2 py-1 rounded hover:bg-gray-400">
-          Dashboard
-        </a>
-        <a href="withdrawal" className="px-2 py-1 rounded hover:bg-gray-100">
-          withdrawal
-        </a>
-        <a href="/settings" className="px-2 py-1 rounded hover:bg-gray-100">
-          Settings
-        </a>
+        <SidebarComponent handleClick={handleClick} selected={selected} />
       </nav>
     </div>
   );

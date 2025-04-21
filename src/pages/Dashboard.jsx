@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   DashboardHeader,
   DashboardSidebar,
@@ -13,7 +12,7 @@ const Dashboard = () => {
   const [selected, setSelected] = useState("My account");
   return (
     <div>
-      <DashboardHeader />
+      <DashboardHeader selected={selected} onSelect={setSelected} />
       <DashboardSidebar selected={selected} onSelect={setSelected} />
       <DashboardBodyHeader />
       <Outlet />
