@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import MobilePhoneSidebar from "./MobilePhoneSidebar";
 
+//props from Dashboard.jsx
 const DashboardHeader = ({ selected, onSelect }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // Define the icons for the desktop header as an array

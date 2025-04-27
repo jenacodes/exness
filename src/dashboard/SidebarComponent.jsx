@@ -20,6 +20,7 @@ const menuItems = [
   { icons: <IoSettingsOutline size={20} />, label: "Settings" },
 ];
 
+//props from DashboardSidebar.jsx
 const SidebarComponent = ({ selected, handleClick }) => {
   return (
     <div>

@@ -7,6 +7,8 @@ import { LuWallet } from "react-icons/lu";
 
 import SidebarComponent from "./SidebarComponent";
 
+//sidebar from dashboardHeader.jsx
+//onselect from dashboard.jsx
 const MobilePhoneSidebar = ({ sidebarOpen, onSelect, onClose, selected }) => {
   const navigate = useNavigate();
 
@@ -47,7 +49,7 @@ const MobilePhoneSidebar = ({ sidebarOpen, onSelect, onClose, selected }) => {
       bg-white backdrop-blur-lg shadow-xl p-2
       transform transition-transform  duration-300 ease-in-out
       z-50 overflow-y-auto
-      md:hidden md:backdrop-blur-none
+      lg:hidden md:backdrop-blur-none
       ${
         sidebarOpen
           ? "translate-x-0 opacity-100"
