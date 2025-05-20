@@ -44,7 +44,7 @@ const DashboardHeader = ({ selected, onSelect }) => {
 
         {/* Desktop Header */}
         <div className="px-4 py-2 hidden lg:flex items-center justify-between ">
-          <a href="/dashboard">
+          <a href="/dashboard/myaccount">
             <img
               src="\exness.svg"
               alt="Exness logo"
