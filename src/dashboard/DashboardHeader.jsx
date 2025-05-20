@@ -30,7 +30,7 @@ const DashboardHeader = ({ selected, onSelect }) => {
               <i className="ri-menu-line"></i>
             )}
           </button>
-          <a href="/dashboard">
+          <a href="/dashboard/myaccount">
             <img
               src="\exness.svg"
               alt="Exness logo"

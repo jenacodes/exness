@@ -54,6 +54,7 @@ import WithdrawalSection from "../dashboard/WithdrawalSection";
 import MyAccountsSection from "../dashboard/MyAccountsSection";
 import MobilePhoneSidebar from "../dashboard/MobilePhoneSidebar";
 import SidebarComponent from "../dashboard/SidebarComponent";
+import History from "../dashboard/History";
 export {
   HeroSection,
   Articles,
@@ -104,11 +105,11 @@ export {
   ToggleButton,
   DashboardYellowBtn,
   AccountsSection,
-  // DashboardContent,
   DepositsSection,
   PaymentMethodCard,
   WithdrawalSection,
   MyAccountsSection,
   MobilePhoneSidebar,
   SidebarComponent,
+  History,
 };

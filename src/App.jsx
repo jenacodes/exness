@@ -20,6 +20,7 @@ import {
   MyAccountsSection,
   DepositsSection,
   WithdrawalSection,
+  History,
 } from "./components";
 import { useState } from "react";
 
@@ -65,7 +66,7 @@ function App() {
             }
           />
           <Route path="withdrawal" element={<WithdrawalSection />} />
-          {/* <Route path="setting" element={<SettingsPage />} /> */}
+          <Route path="transactionhistory" element={<History />} />
         </Route>
       </Routes>
     </>
